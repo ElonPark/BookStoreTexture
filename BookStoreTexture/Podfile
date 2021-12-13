@@ -2,18 +2,33 @@
 platform :ios, '13.0'
 
 target 'BookStoreTexture' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  inhibit_all_warnings!
 
   # Pods for BookStoreTexture
+
+  # DI
+  pod 'Pure'
+
+  # Network
+  pod 'Moya', '~> 15.0'
+
+  # UI
+  pod 'Texture'
+
+  # Image
+  pod 'Kingfisher', '~> 7.0'
+
+  # Common
+  pod 'Then'
 
   target 'BookStoreTextureTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
   end
 
   target 'BookStoreTextureUITests' do
     # Pods for testing
   end
-
 end
