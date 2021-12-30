@@ -16,9 +16,6 @@ target 'BookStoreTexture' do
   # UI
   pod 'Texture'
 
-  # Image
-  pod 'Kingfisher', '~> 7.0'
-
   # Common
   pod 'Then'
 
