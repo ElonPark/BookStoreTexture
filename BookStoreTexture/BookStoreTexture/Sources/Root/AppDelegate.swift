@@ -7,18 +7,43 @@
 
 import UIKit
 
-@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+  // MARK: UI Components
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  var window: UIWindow?
 
-        window = UIWindow()
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+  // MARK: Properties
 
-        return true
-    }
+  private let dependency: AppDependency
+
+  // MARK: - Initializing
+
+  override init() {
+    self.dependency = CompositionRoot.resolve()
+    super.init()
+  }
+
+  init(dependency: AppDependency) {
+    self.dependency = dependency
+    super.init()
+  }
+
+
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    configureWindow()
+
+    return true
+  }
 }
 
+extension AppDelegate {
+  private func configureWindow() {
+    self.window = dependency.window
+    self.window?.rootViewController = dependency.rootViewController
+    self.window?.makeKeyAndVisible()
+  }
+}
