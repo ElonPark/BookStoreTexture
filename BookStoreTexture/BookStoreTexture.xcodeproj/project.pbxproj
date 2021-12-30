@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		2C94F7CB91928C9F6FBBA672 /* Pods_BookStoreTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83C8B2CF52F17D3DC4F51F6 /* Pods_BookStoreTexture.framework */; };
 		67FFB04D42C5FCBD5D51918F /* Pods_BookStoreTexture_BookStoreTextureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */; };
+		DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */; };
+		DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */; };
+		DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */; };
+		DB0484E0277DF8E8008EB8ED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D4277DCF62008EB8ED /* main.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
 		DBFE6A5F2763AAC000DAAFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFE6A5E2763AAC000DAAFBD /* Assets.xcassets */; };
 		DBFE6A622763AAC000DAAFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFE6A602763AAC000DAAFBD /* LaunchScreen.storyboard */; };
-		DBFE6A6D2763AAC000DAAFBD /* BookStoreTextureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A6C2763AAC000DAAFBD /* BookStoreTextureTests.swift */; };
 		DBFE6A772763AAC000DAAFBD /* BookStoreTextureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A762763AAC000DAAFBD /* BookStoreTextureUITests.swift */; };
 		DBFE6A792763AAC000DAAFBD /* BookStoreTextureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A782763AAC000DAAFBD /* BookStoreTextureUITestsLaunchTests.swift */; };
 		FA7A6EC059E116C05B3BCE88 /* Pods_BookStoreTextureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997B1AE736672FB285F32A7 /* Pods_BookStoreTextureTests.framework */; };
@@ -46,6 +49,10 @@
 		897610E2FE46B5482F97DB4D /* Pods-BookStoreTexture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStoreTexture.debug.xcconfig"; path = "Target Support Files/Pods-BookStoreTexture/Pods-BookStoreTexture.debug.xcconfig"; sourceTree = "<group>"; };
 		A83C8B2CF52F17D3DC4F51F6 /* Pods_BookStoreTexture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStoreTexture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStoreTexture_BookStoreTextureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		DB0484D4277DCF62008EB8ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
+		DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBFE6A592763AABF00DAAFBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		DBFE6A612763AAC000DAAFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBFE6A632763AAC000DAAFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBFE6A682763AAC000DAAFBD /* BookStoreTextureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreTextureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBFE6A6C2763AAC000DAAFBD /* BookStoreTextureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTextureTests.swift; sourceTree = "<group>"; };
 		DBFE6A722763AAC000DAAFBD /* BookStoreTextureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreTextureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A762763AAC000DAAFBD /* BookStoreTextureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTextureUITests.swift; sourceTree = "<group>"; };
 		DBFE6A782763AAC000DAAFBD /* BookStoreTextureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTextureUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -107,7 +113,6 @@
 				2093768B9501474E257F8118 /* Pods-BookStoreTextureTests.debug.xcconfig */,
 				070286C4B0FF748BBFB52C36 /* Pods-BookStoreTextureTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */,
+				DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */,
+				DB0484D4277DCF62008EB8ED /* main.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -172,7 +179,8 @@
 		DBFE6A6B2763AAC000DAAFBD /* BookStoreTextureTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBFE6A6C2763AAC000DAAFBD /* BookStoreTextureTests.swift */,
+				DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */,
+				DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */,
 			);
 			path = BookStoreTextureTests;
 			sourceTree = "<group>";
@@ -442,7 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
+				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +461,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBFE6A6D2763AAC000DAAFBD /* BookStoreTextureTests.swift in Sources */,
+				DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */,
+				DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +684,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M77W68G9P5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +710,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M77W68G9P5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
