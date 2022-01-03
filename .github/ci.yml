@@ -1,0 +1,25 @@
+name: CI
+
+on: [pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    name: Run PR-CI
+    runs-on: macos-11
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_13.0.app/Contents/Developer
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Project Environment
+        run: |
+          make setup
+        
+      - name: Run Test
+        run: |
+          make test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2
