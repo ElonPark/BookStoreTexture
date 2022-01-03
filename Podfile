@@ -14,7 +14,7 @@ target 'BookStoreTexture' do
   pod 'Moya', '~> 15.0'
 
   # UI
-  pod 'Texture', :git => 'git@github.com:TextureGroup/Texture.git'
+  pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git'
 
   # Common
   pod 'Then'
