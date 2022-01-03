@@ -89,3 +89,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 Pods
+test_output/
+.DS_Store
