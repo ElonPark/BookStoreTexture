@@ -21,11 +21,10 @@ platform :ios do
     run_tests(
       workspace: 'BookStoreTexture.xcworkspace',
       scheme: 'BookStoreTexture',
-      device: 'iPhone 12 Pro (14.5)',
+      device: 'iPhone 12 Pro',
       ensure_devices_found: true,
       code_coverage: true,
-      clean: true,
-      deployment_target_version: '14.5'
+      clean: true
     )
   end
 end
