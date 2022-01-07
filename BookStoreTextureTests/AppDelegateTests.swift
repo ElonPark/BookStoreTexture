@@ -29,7 +29,7 @@ class AppDelegateTests: XCTestCase {
 // MARK: - didFinishLaunchingWithOptions
 
 extension AppDelegateTests {
-  func test_테스트_타겟은_앱델리게이트를_AppDelegateStub을_사용해요() throws {
+  func test_테스트_타겟은_앱델리게이트를_AppDelegateTestDouble을_사용해요() throws {
     // then
     expect(UIApplication.shared.delegate is AppDelegateTestDouble).to(beTrue())
   }
