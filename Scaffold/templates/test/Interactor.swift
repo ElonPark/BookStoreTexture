@@ -22,7 +22,7 @@ final class __SCENE_NAME__InteractorTests: XCTestCase {
   // MARK: - Properties
 
   var presenter: __SCENE_NAME__PresenterSpy!
-  var interactor = __SCENE_NAME__Interactor!
+  var interactor: __SCENE_NAME__Interactor!
 
   override func setUp() {
     self.presenter = __SCENE_NAME__PresenterSpy()
