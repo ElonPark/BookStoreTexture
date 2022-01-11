@@ -15,7 +15,7 @@ protocol __SCENE_NAME__DisplayLogic: AnyObject {
 // clean-swift-scaffold-generate-display-interface (do-not-remove-comments)
 }
 
-final class __SCENE_NAME__ViewController: UIVIewController {
+final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
 
   // MARK: DI
 
