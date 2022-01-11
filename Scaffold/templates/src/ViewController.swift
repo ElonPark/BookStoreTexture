@@ -36,7 +36,7 @@ final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
  init(dependency: Dependency, payload: Payload) {
     self.dependency = dependency
     super.init()
-    self.configure()
+   self.configure(dependency: dependency)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -45,15 +45,15 @@ final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
 
   // MARK: - Configuring
 
-  private func configure() {
+  private func configure(dependency: Dependency) {
     let viewController = self
-    let interactor = __SCENE_NAME__Interactor()
-    let presenter = __SCENE_NAME__Presenter()
-    let router = __SCENE_NAME__Router()
+    let interactor = self.dependency.interactorFactory.create()
+    let presenter = SearchPresenter()
+    let router = self.dependency.routerFactory.create()
 
     interactor.presenter = presenter
 
-    presenter.view = viewController
+    presenter.viewController = viewController
 
     router.viewController = viewController
     router.dataStore = interactor
