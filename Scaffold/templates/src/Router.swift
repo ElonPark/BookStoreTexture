@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Pure
+
 protocol __SCENE_NAME__RoutingLogic: AnyObject {
 
 }
