@@ -8,9 +8,8 @@
 
 import XCTest
 
-import Nimble
-
 @testable import __TARGET_PROJECT_NAME__
+import Nimble
 
 final class __SCENE_NAME__PresenterTests: XCTestCase {
 

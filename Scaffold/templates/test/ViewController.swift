@@ -8,10 +8,9 @@
 
 import XCTest
 
+@testable import __TARGET_PROJECT_NAME__
 import Nimble
 import Pure
-
-@testable import __TARGET_PROJECT_NAME__
 
 final class __SCENE_NAME__ViewControllerTests: XCTestCase {
 
