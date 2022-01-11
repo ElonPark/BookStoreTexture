@@ -1,6 +1,6 @@
 target_project_name: BookStoreTexture
 copyright: Elon Park
 template_path: ./Scaffold/templates
-source_dir: ./BookStoreTexture/Sources
-test_dir: ./BookStoreTexture/BookStoreTextureTests
+source_dir: ./BookStoreTexture/Sources/Scenes
+test_dir: ./BookStoreTextureTests/Scenes
 indentation: 2

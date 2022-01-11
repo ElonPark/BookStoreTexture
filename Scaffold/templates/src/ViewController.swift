@@ -2,7 +2,7 @@
 //  __SCENE_NAME__ViewController.swift
 //  __TARGET_PROJECT_NAME__
 //
-//  Created by clean-swift-scaffold on __DATE__.
+//  Created by __COPYRIGHT__ on __DATE__.
 //  Copyright © __YEAR__ __COPYRIGHT__. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ protocol __SCENE_NAME__DisplayLogic: AnyObject {
 // clean-swift-scaffold-generate-display-interface (do-not-remove-comments)
 }
 
-final class __SCENE_NAME__ViewController: UIVIewController {
+final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
 
   // MARK: DI
 
@@ -36,7 +36,7 @@ final class __SCENE_NAME__ViewController: UIVIewController {
  init(dependency: Dependency, payload: Payload) {
     self.dependency = dependency
     super.init()
-    self.configure()
+   self.configure(dependency: dependency)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -45,15 +45,15 @@ final class __SCENE_NAME__ViewController: UIVIewController {
 
   // MARK: - Configuring
 
-  private func configure() {
+  private func configure(dependency: Dependency) {
     let viewController = self
-    let interactor = __SCENE_NAME__Interactor()
-    let presenter = __SCENE_NAME__Presenter()
-    let router = __SCENE_NAME__Router()
+    let interactor = self.dependency.interactorFactory.create()
+    let presenter = SearchPresenter()
+    let router = self.dependency.routerFactory.create()
 
     interactor.presenter = presenter
 
-    presenter.view = viewController
+    presenter.viewController = viewController
 
     router.viewController = viewController
     router.dataStore = interactor

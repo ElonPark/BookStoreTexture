@@ -2,11 +2,13 @@
 //  __SCENE_NAME__Router.swift
 //  __TARGET_PROJECT_NAME__
 //
-//  Created by clean-swift-scaffold on __DATE__.
+//  Created by __COPYRIGHT__on __DATE__.
 //  Copyright © __YEAR__ __COPYRIGHT__. All rights reserved.
 //
 
 import UIKit
+
+import Pure
 
 protocol __SCENE_NAME__RoutingLogic: AnyObject {
 
@@ -17,7 +19,7 @@ protocol __SCENE_NAME__DataPassing: AnyObject {
   var dataStore: __SCENE_NAME__DataStore? { get set }
 }
 
-final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing {
+final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing, FactoryModule {
 
   // MARK: - DI
 
