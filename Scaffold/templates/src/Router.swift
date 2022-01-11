@@ -17,7 +17,7 @@ protocol __SCENE_NAME__DataPassing: AnyObject {
   var dataStore: __SCENE_NAME__DataStore? { get set }
 }
 
-final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing {
+final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing, FactoryModule {
 
   // MARK: - DI
 

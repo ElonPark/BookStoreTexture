@@ -19,7 +19,7 @@ protocol __SCENE_NAME__DataStore: AnyObject {
 
 }
 
-final class __SCENE_NAME__Interactor: __SCENE_NAME__DataStore {
+final class __SCENE_NAME__Interactor: __SCENE_NAME__DataStore, FactoryModule {
 
   // MARK: - DI
 
