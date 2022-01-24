@@ -13,6 +13,7 @@
 		DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */; };
 		DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */; };
 		DB0484E0277DF8E8008EB8ED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D4277DCF62008EB8ED /* main.swift */; };
+		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
 		DBFE6A5F2763AAC000DAAFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFE6A5E2763AAC000DAAFBD /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		DB0484D4277DCF62008EB8ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
 		DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBFE6A592763AABF00DAAFBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,156 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DB979A2B27931AA600E55AE9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3B27931ED400E55AE9 /* UI */,
+				DB979A3927931EBC00E55AE9 /* Protocols */,
+				DB979A3A27931EC500E55AE9 /* Extensions */,
+				DB979A3F27931F1500E55AE9 /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB979A2C27931AB000E55AE9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3827931EA400E55AE9 /* UseCases */,
+				DB979A3727931E9400E55AE9 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DB979A2D27931AB900E55AE9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3327931AFF00E55AE9 /* Repositories */,
+				DB979A3127931AE500E55AE9 /* DataSources */,
+				DB979A3027931AD300E55AE9 /* Entites */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DB979A3027931AD300E55AE9 /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entites;
+			sourceTree = "<group>";
+		};
+		DB979A3127931AE500E55AE9 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3227931AF200E55AE9 /* Network */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		DB979A3227931AF200E55AE9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3627931C4300E55AE9 /* APIs */,
+				DB979A3527931C3600E55AE9 /* Fixtures */,
+				DB979A3427931C2C00E55AE9 /* Protocols */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DB979A3327931AFF00E55AE9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DB979A3427931C2C00E55AE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DB979A3527931C3600E55AE9 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		DB979A3627931C4300E55AE9 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		DB979A3727931E9400E55AE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB979A3827931EA400E55AE9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB979A3927931EBC00E55AE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DB979A3A27931EC500E55AE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB979A3B27931ED400E55AE9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB979A3E27931F0900E55AE9 /* Views */,
+				DB979A3D27931EFE00E55AE9 /* BaseComponents */,
+				DB979A3C27931EE700E55AE9 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DB979A3C27931EE700E55AE9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				DBF9F5C6279EDAD100E7DAEC /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		DB979A3D27931EFE00E55AE9 /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		DB979A3E27931F0900E55AE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB979A3F27931F1500E55AE9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		DBD708A4276773B7001C5390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +281,9 @@
 		DBD708A527677407001C5390 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DB979A2D27931AB900E55AE9 /* Data */,
+				DB979A2C27931AB000E55AE9 /* Domain */,
+				DB979A2B27931AA600E55AE9 /* Presentation */,
 				DBD708A627677516001C5390 /* Root */,
 				DBFE6A592763AABF00DAAFBD /* ViewController.swift */,
 			);
@@ -452,6 +607,7 @@
 			files = (
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
+				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
 			);
