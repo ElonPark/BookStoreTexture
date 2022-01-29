@@ -24,6 +24,12 @@
 		DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */; };
 		DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23E27A6BE7900510758 /* DelayOption.swift */; };
 		DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24027A6BEBB00510758 /* SmartRetry.swift */; };
+		DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */; };
+		DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24427A6CC3700510758 /* SearchAPI.swift */; };
+		DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */; };
+		DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */; };
+		DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */; };
+		DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -76,6 +82,12 @@
 		DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialBackoffFullJitter.swift; sourceTree = "<group>"; };
 		DBCBD23E27A6BE7900510758 /* DelayOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOption.swift; sourceTree = "<group>"; };
 		DBCBD24027A6BEBB00510758 /* SmartRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRetry.swift; sourceTree = "<group>"; };
+		DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtensions.swift; sourceTree = "<group>"; };
+		DBCBD24427A6CC3700510758 /* SearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreInformation.swift; sourceTree = "<group>"; };
+		DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPISampleDataFactory.swift; sourceTree = "<group>"; };
+		DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTastable.swift; sourceTree = "<group>"; };
+		DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureFactory.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +218,32 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		DB979A3427931C2C00E55AE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */,
+				DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DB979A3527931C3600E55AE9 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		DB979A3627931C4300E55AE9 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */,
+				DBCBD24427A6CC3700510758 /* SearchAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		DB979A3727931E9400E55AE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +315,7 @@
 		DBCBD22F27A5BB9E00510758 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBD22D27A5BB9000510758 /* TargetTypeExtensions.swift */,
+				DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -646,20 +684,21 @@
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
+				DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */,
 				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
+				DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */,
 				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
-				DBCBD22A27A5BA0300510758 /* FixtureFactory.swift in Sources */,
-				DBCBD22E27A5BB9000510758 /* TargetTypeExtensions.swift in Sources */,
 				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
+				DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
-				DBCBD22827A5B9C400510758 /* EndpointTastable.swift in Sources */,
-				DBCBD22C27A5BA9600510758 /* SearchAPISampleDataFactory.swift in Sources */,
-				DBCBD22627A5B91D00510758 /* SearchAPI.swift in Sources */,
 				DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */,
+				DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */,
+				DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */,
+				DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */,
 				DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
