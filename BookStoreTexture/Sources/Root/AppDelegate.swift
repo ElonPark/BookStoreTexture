@@ -7,6 +7,10 @@
 
 import UIKit
 
+import EPLogger
+
+public typealias Log = EPLogger.Log
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   // MARK: UI Components
