@@ -16,6 +16,8 @@
 		DB2B035D27A59253007CBAF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035C27A59253007CBAF3 /* Network.swift */; };
 		DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */; };
 		DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */; };
+		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
+		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -60,6 +62,8 @@
 		DB2B035C27A59253007CBAF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptor.swift; sourceTree = "<group>"; };
 		DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptorSpec.swift; sourceTree = "<group>"; };
+		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,9 +176,6 @@
 		DB979A3227931AF200E55AE9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DB979A3627931C4300E55AE9 /* APIs */,
-				DB979A3527931C3600E55AE9 /* Fixtures */,
-				DB979A3427931C2C00E55AE9 /* Protocols */,
 				DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */,
 				DB2B035C27A59253007CBAF3 /* Network.swift */,
 			);
@@ -188,27 +189,6 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		DB979A3427931C2C00E55AE9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		DB979A3527931C3600E55AE9 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
-		DB979A3627931C4300E55AE9 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
 		DB979A3727931E9400E55AE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +199,7 @@
 		DB979A3827931EA400E55AE9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD23027A5C47300510758 /* ReachabilityManager.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -345,6 +326,7 @@
 				DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */,
 				DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */,
 				DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */,
+				DBCBD23227A5D01B00510758 /* OutputMocks.swift */,
 			);
 			path = BookStoreTextureTests;
 			sourceTree = "<group>";
@@ -616,6 +598,7 @@
 			files = (
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
+				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
@@ -630,6 +613,7 @@
 			files = (
 				DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */,
 				DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */,
+				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,
 				DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,12 +14,14 @@ class AppDelegateTests: XCTestCase {
 
   private func makeAppDelegate(
     window: UIWindow = .init(),
-    rootViewController: UIViewController = .init()
+    rootViewController: UIViewController = .init(),
+    reachabilityManager: ReachabilityManageable = ReachabilityManageableMock()
   ) -> AppDelegate {
     return AppDelegate(
       dependency: AppDependency(
         window: window,
-        rootViewController: rootViewController
+        rootViewController: rootViewController,
+        reachabilityManager: reachabilityManager
       )
     )
   }
@@ -64,5 +66,17 @@ extension AppDelegateTests {
     expect(appDelegate.window?.isKeyWindow) == true
 
     expect(appDelegate.window?.rootViewController) === rootViewController
+  }
+
+  func test_didFinishLaunchingWithOptions가_호출되면_configureReachability를_호출해요() throws {
+    // given
+    let mock = ReachabilityManageableMock()
+    let appDelegate = self.makeAppDelegate(reachabilityManager: mock)
+
+    // when
+    _ = appDelegate.application(.shared, didFinishLaunchingWithOptions: nil)
+
+    // then
+    expect(mock.configureReachabilityCallCount) == 1
   }
 }

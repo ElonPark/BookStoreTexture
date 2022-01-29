@@ -38,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    configureWindow()
+    self.configureWindow()
+    self.dependency.reachabilityManager.configureReachability()
 
     return true
   }
@@ -46,8 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
   private func configureWindow() {
-    self.window = dependency.window
-    self.window?.rootViewController = dependency.rootViewController
+    self.window = self.dependency.window
+    self.window?.rootViewController = self.dependency.rootViewController
     self.window?.makeKeyAndVisible()
   }
 }
