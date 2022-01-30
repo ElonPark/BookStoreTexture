@@ -33,6 +33,10 @@
 		DBCBD24F27A6CCCA00510758 /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */; };
 		DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */; };
 		DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */; };
+		DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */; };
+		DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25627A6EB9000510758 /* SearchResult.swift */; };
+		DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25827A6ED1500510758 /* BookDetails.swift */; };
+		DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -94,6 +98,10 @@
 		DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
 		DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPISampleDataFactory.swift; sourceTree = "<group>"; };
 		DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepository.swift; sourceTree = "<group>"; };
+		DBCBD25627A6EB9000510758 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		DBCBD25827A6ED1500510758 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
+		DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepositoryTests.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 		DB979A3027931AD300E55AE9 /* Entites */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD25627A6EB9000510758 /* SearchResult.swift */,
+				DBCBD25827A6ED1500510758 /* BookDetails.swift */,
 			);
 			path = Entites;
 			sourceTree = "<group>";
@@ -221,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */,
+				DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -350,6 +361,15 @@
 			path = Backoff;
 			sourceTree = "<group>";
 		};
+		DBCBD25A27A6EED000510758 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */,
+				DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DBD708A4276773B7001C5390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,9 +436,9 @@
 		DBFE6A6B2763AAC000DAAFBD /* BookStoreTextureTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD25A27A6EED000510758 /* Network */,
 				DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */,
 				DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */,
-				DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */,
 				DBCBD23227A5D01B00510758 /* OutputMocks.swift */,
 			);
 			path = BookStoreTextureTests;
@@ -689,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */,
 				DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */,
 				DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */,
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
@@ -700,6 +721,8 @@
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
+				DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */,
+				DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */,
 				DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */,
 				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
 				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
@@ -719,6 +742,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */,
 				DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */,
 				DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */,
 				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,

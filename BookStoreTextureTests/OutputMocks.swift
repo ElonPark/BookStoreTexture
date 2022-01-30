@@ -7,8 +7,44 @@
 import Foundation
 import Moya
 import Reachability
+import RxSwift
 @testable import BookStoreTexture
 
+
+class BookStoreRepositoryMock: BookStoreRepository {
+    init() { }
+
+
+    private(set) var requestSearchResultCallCount = 0
+    var requestSearchResultHandler: ((String) -> (Single<SearchResult>))?
+    func requestSearchResult(byQuery query: String) -> Single<SearchResult> {
+        requestSearchResultCallCount += 1
+        if let requestSearchResultHandler = requestSearchResultHandler {
+            return requestSearchResultHandler(query)
+        }
+        fatalError("requestSearchResultHandler returns can't have a default value thus its handler must be set")
+    }
+
+    private(set) var requestSearchResultByQueryCallCount = 0
+    var requestSearchResultByQueryHandler: ((String, Int) -> (Single<SearchResult>))?
+    func requestSearchResult(byQuery query: String, withNextPageNumber page: Int) -> Single<SearchResult> {
+        requestSearchResultByQueryCallCount += 1
+        if let requestSearchResultByQueryHandler = requestSearchResultByQueryHandler {
+            return requestSearchResultByQueryHandler(query, page)
+        }
+        fatalError("requestSearchResultByQueryHandler returns can't have a default value thus its handler must be set")
+    }
+
+    private(set) var requestBookDetailsCallCount = 0
+    var requestBookDetailsHandler: ((String) -> (Single<BoolDetails>))?
+    func requestBookDetails(byISBN13 isbn13: String) -> Single<BoolDetails> {
+        requestBookDetailsCallCount += 1
+        if let requestBookDetailsHandler = requestBookDetailsHandler {
+            return requestBookDetailsHandler(isbn13)
+        }
+        fatalError("requestBookDetailsHandler returns can't have a default value thus its handler must be set")
+    }
+}
 
 class ReachabilityManageableMock: ReachabilityManageable {
     init() { }
