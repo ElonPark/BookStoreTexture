@@ -18,6 +18,12 @@
 		DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */; };
 		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
 		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
+		DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23627A6B73F00510758 /* Backoff.swift */; };
+		DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */; };
+		DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */; };
+		DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */; };
+		DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23E27A6BE7900510758 /* DelayOption.swift */; };
+		DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24027A6BEBB00510758 /* SmartRetry.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -64,6 +70,12 @@
 		DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptorSpec.swift; sourceTree = "<group>"; };
 		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
+		DBCBD23627A6B73F00510758 /* Backoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backoff.swift; sourceTree = "<group>"; };
+		DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffStrategy.swift; sourceTree = "<group>"; };
+		DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialBackoffDecorrelatedJitter.swift; sourceTree = "<group>"; };
+		DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialBackoffFullJitter.swift; sourceTree = "<group>"; };
+		DBCBD23E27A6BE7900510758 /* DelayOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOption.swift; sourceTree = "<group>"; };
+		DBCBD24027A6BEBB00510758 /* SmartRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRetry.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +188,11 @@
 		DB979A3227931AF200E55AE9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD23427A6B6F800510758 /* SmartRetry */,
+				DBCBD22F27A5BB9E00510758 /* Extensions */,
+				DB979A3427931C2C00E55AE9 /* Protocols */,
+				DB979A3527931C3600E55AE9 /* Fixtures */,
+				DB979A3627931C4300E55AE9 /* APIs */,
 				DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */,
 				DB2B035C27A59253007CBAF3 /* Network.swift */,
 			);
@@ -255,6 +272,35 @@
 			children = (
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DBCBD22F27A5BB9E00510758 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD22D27A5BB9000510758 /* TargetTypeExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DBCBD23427A6B6F800510758 /* SmartRetry */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD23527A6B72800510758 /* Backoff */,
+				DBCBD23E27A6BE7900510758 /* DelayOption.swift */,
+				DBCBD24027A6BEBB00510758 /* SmartRetry.swift */,
+			);
+			path = SmartRetry;
+			sourceTree = "<group>";
+		};
+		DBCBD23527A6B72800510758 /* Backoff */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD23627A6B73F00510758 /* Backoff.swift */,
+				DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */,
+				DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */,
+				DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */,
+			);
+			path = Backoff;
 			sourceTree = "<group>";
 		};
 		DBD708A4276773B7001C5390 /* Resources */ = {
@@ -596,14 +642,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */,
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
+				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
+				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
+				DBCBD22A27A5BA0300510758 /* FixtureFactory.swift in Sources */,
+				DBCBD22E27A5BB9000510758 /* TargetTypeExtensions.swift in Sources */,
+				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
+				DBCBD22827A5B9C400510758 /* EndpointTastable.swift in Sources */,
+				DBCBD22C27A5BA9600510758 /* SearchAPISampleDataFactory.swift in Sources */,
+				DBCBD22627A5B91D00510758 /* SearchAPI.swift in Sources */,
+				DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */,
+				DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
