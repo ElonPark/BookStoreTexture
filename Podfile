@@ -26,6 +26,9 @@ target 'BookStoreTexture' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
   target 'BookStoreTextureUITests' do

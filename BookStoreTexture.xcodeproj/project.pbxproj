@@ -37,6 +37,7 @@
 		DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25627A6EB9000510758 /* SearchResult.swift */; };
 		DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25827A6ED1500510758 /* BookDetails.swift */; };
 		DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */; };
+		DBCBD26227A712E100510758 /* SmartRetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD26127A712E100510758 /* SmartRetryTests.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -102,6 +103,7 @@
 		DBCBD25627A6EB9000510758 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DBCBD25827A6ED1500510758 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
 		DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepositoryTests.swift; sourceTree = "<group>"; };
+		DBCBD26127A712E100510758 /* SmartRetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRetryTests.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			children = (
 				DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */,
 				DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */,
+				DBCBD26127A712E100510758 /* SmartRetryTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 			files = (
 				DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */,
 				DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */,
+				DBCBD26227A712E100510758 /* SmartRetryTests.swift in Sources */,
 				DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */,
 				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,
 				DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */,

@@ -9,7 +9,6 @@ import XCTest
 
 @testable import BookStoreTexture
 import Nimble
-import Moya
 
 class BookStoreRepositoryTests: XCTestCase {
 
