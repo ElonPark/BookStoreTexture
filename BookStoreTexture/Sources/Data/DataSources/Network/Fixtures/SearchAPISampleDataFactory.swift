@@ -20,18 +20,20 @@ struct SearchAPISampleDataFactory: FixtureFactory {
       """
   }
 
+#if DEBUG
   func makeFixtureData() -> Data {
-    #if DEBUG
-      switch endpoint {
-      case .search:
-        return convertToData(from: searchResponse)
-      case .searchWithPagination:
-        return convertToData(from: searchWithPaginationResponse)
-      }
-    #else
-      return Data()
-    #endif
+    switch endpoint {
+    case .search:
+      return convertToData(from: searchResponse)
+    case .searchWithPagination:
+      return convertToData(from: searchWithPaginationResponse)
+    }
   }
+#else
+  func makeFixtureData() -> Data {
+    return Data()
+  }
+#endif
 }
 
 #if DEBUG

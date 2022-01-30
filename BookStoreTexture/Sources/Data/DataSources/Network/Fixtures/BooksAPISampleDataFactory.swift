@@ -18,16 +18,18 @@ struct BooksAPISampleDataFactory: FixtureFactory {
   """
   }
 
+#if DEBUG
   func makeFixtureData() -> Data {
-    #if DEBUG
-      switch endpoint {
-      case .bookDetails:
-        return convertToData(from: bookDetailsResponse)
-      }
-    #else
-      return Data()
-    #endif
+    switch endpoint {
+    case .bookDetails:
+      return convertToData(from: bookDetailsResponse)
+    }
   }
+#else
+  func makeFixtureData() -> Data {
+    return Data()
+  }
+#endif
 }
 
 #if DEBUG
