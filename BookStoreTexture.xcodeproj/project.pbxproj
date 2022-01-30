@@ -32,6 +32,7 @@
 		DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */; };
 		DBCBD24F27A6CCCA00510758 /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */; };
 		DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */; };
+		DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureFactory.swift; sourceTree = "<group>"; };
 		DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
 		DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPISampleDataFactory.swift; sourceTree = "<group>"; };
+		DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		DB979A3327931AFF00E55AE9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */,
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
+				DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
 				DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */,
 				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,

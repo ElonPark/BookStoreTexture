@@ -8,22 +8,35 @@
 import Moya
 import RxSwift
 
-final class Network<Target: TargetType>: MoyaProvider<Target> {
+protocol Networking {
+  func request(
+    _ target: TargetType,
+    retryCount: Int,
+    initialDelay: Double,
+    maxDelay: Double,
+    file: String,
+    function: String,
+    line: UInt
+  ) -> Single<Response>
+}
+
+final class Network: MoyaProvider<MultiTarget>, Networking {
 
   func request(
-    _ target: Target,
-    retryCount: Int = 5,
-    initialDelay: Double = 0.5,
-    maxDelay: Double = 10.0,
-    file: String = #file,
-    function: String = #function,
-    line: UInt = #line
+    _ target: TargetType,
+    retryCount: Int,
+    initialDelay: Double,
+    maxDelay: Double,
+    file: String,
+    function: String,
+    line: UInt
   ) -> Single<Response> {
     let request: Single<Response>
+    let multiTarget = Moya.MultiTarget.target(target)
 
     #if DEBUG
       let requestString = "\(target.method.rawValue) \(target.path)"
-      request = rx.request(target)
+      request = rx.request(multiTarget)
         .do(
           onSuccess: { response in
             let message = "SUCCESS: \(requestString) (\(response.description))"
@@ -41,7 +54,7 @@ final class Network<Target: TargetType>: MoyaProvider<Target> {
           }
         )
     #else
-      request = rx.request(target)
+      request = rx.request(multiTarget)
     #endif
 
     if retryCount > 0 {
