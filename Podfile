@@ -11,18 +11,24 @@ target 'BookStoreTexture' do
   pod 'Pure'
 
   # Network
-  pod 'Moya', '~> 15.0'
+  pod 'Moya/RxSwift', '~> 15.0'
+  pod 'RxReachability', '~> 1.2.1'
 
   # UI
   pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git'
 
   # Common
   pod 'Then'
+  pod 'EPLogger'
 
   target 'BookStoreTextureTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
     pod 'Nimble'
+
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
   target 'BookStoreTextureUITests' do
