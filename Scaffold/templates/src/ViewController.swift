@@ -15,7 +15,7 @@ protocol __SCENE_NAME__DisplayLogic: AnyObject {
 // clean-swift-scaffold-generate-display-interface (do-not-remove-comments)
 }
 
-final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
+final class __SCENE_NAME__ViewController: BaseASViewController, FactoryModule {
 
   // MARK: DI
 
@@ -24,12 +24,14 @@ final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
     let routerFactory: __SCENE_NAME__Router.Factory
   }
 
+
   // MARK: - Properties
 
   var router: (__SCENE_NAME__RoutingLogic & __SCENE_NAME__DataPassing)?
   var interactor: __SCENE_NAME__BusinessLogic?
 
   private let dependency: Dependency
+
 
   // MARK: - Initializing
 
@@ -39,9 +41,6 @@ final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
    self.configure(dependency: dependency)
   }
 
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
 
   // MARK: - Configuring
 
@@ -62,6 +61,7 @@ final class __SCENE_NAME__ViewController: UIViewController, FactoryModule {
     viewController.router = router
   }
 }
+
 
 // MARK: - Display Logic
 

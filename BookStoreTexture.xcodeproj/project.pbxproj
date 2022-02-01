@@ -38,6 +38,10 @@
 		DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32727A95D5900510758 /* SmartRetryTests.swift */; };
 		DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */; };
 		DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */; };
+		DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33327A95DA200510758 /* BaseASController.swift */; };
+		DBCBD33727A96C4E00510758 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33627A96C4E00510758 /* HasDisposeBag.swift */; };
+		DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */; };
+		DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -104,6 +108,10 @@
 		DBCBD32727A95D5900510758 /* SmartRetryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartRetryTests.swift; sourceTree = "<group>"; };
 		DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
+		DBCBD33327A95DA200510758 /* BaseASController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASController.swift; sourceTree = "<group>"; };
+		DBCBD33627A96C4E00510758 /* HasDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
+		DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDisplayNode.swift; sourceTree = "<group>"; };
+		DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -374,6 +382,32 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		DBCBD33227A95D9200510758 /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD33327A95DA200510758 /* BaseASController.swift */,
+				DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */,
+				DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		DBCBD33827A96C6C00510758 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD33927A96C8300510758 /* Protocols */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DBCBD33927A96C8300510758 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD33627A96C4E00510758 /* HasDisposeBag.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DBD708A4276773B7001C5390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +421,7 @@
 		DBD708A527677407001C5390 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBD33827A96C6C00510758 /* Utilities */,
 				DB979A2D27931AB900E55AE9 /* Data */,
 				DB979A2C27931AB000E55AE9 /* Domain */,
 				DB979A2B27931AA600E55AE9 /* Presentation */,
@@ -721,12 +756,15 @@
 				DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
 				DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */,
+				DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */,
 				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
+				DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
 				DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */,
 				DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */,
+				DBCBD33727A96C4E00510758 /* HasDisposeBag.swift in Sources */,
 				DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */,
 				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
 				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
@@ -734,6 +772,7 @@
 				DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
+				DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */,
 				DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */,
 				DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */,
 				DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */,
