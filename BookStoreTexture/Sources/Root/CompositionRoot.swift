@@ -16,7 +16,7 @@ struct AppDependency {
 enum CompositionRoot {
   static func resolve() -> AppDependency {
     let window = UIWindow(frame: UIScreen.main.bounds)
-    let rootViewController = ViewController()
+    let rootViewController = self.createRootViewController()
     let reachabilityManager = ReachabilityManager()
 
     return AppDependency(
@@ -24,5 +24,23 @@ enum CompositionRoot {
       rootViewController: rootViewController,
       reachabilityManager: reachabilityManager
     )
+  }
+
+  private static func createRootViewController() -> UIViewController {
+    let searchViewController = self.createSearchViewController()
+    return BaseNavigationController(rootViewController: searchViewController)
+  }
+
+  private static func createSearchViewController() -> SearchViewController {
+    return SearchViewController.Factory(
+      dependency: SearchViewController.Dependency(
+        interactorFactory: SearchInteractor.Factory(
+          dependency: SearchInteractor.Dependency()
+        ),
+        routerFactory: SearchRouter.Factory(
+          dependency: SearchRouter.Dependency()
+        )
+      )
+    ).create()
   }
 }

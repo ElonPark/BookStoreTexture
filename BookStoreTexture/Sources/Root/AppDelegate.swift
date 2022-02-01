@@ -13,13 +13,16 @@ public typealias Log = EPLogger.Log
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
   // MARK: UI Components
 
   var window: UIWindow?
 
+
   // MARK: Properties
 
   private let dependency: AppDependency
+
 
   // MARK: - Initializing
 
@@ -32,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.dependency = dependency
     super.init()
   }
-
 
   func application(
     _ application: UIApplication,
