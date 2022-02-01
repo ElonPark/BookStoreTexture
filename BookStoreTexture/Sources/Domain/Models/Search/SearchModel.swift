@@ -8,23 +8,17 @@
 
 enum SearchModel {
   enum Search {
-
     struct Request {
-
+      let query: String
     }
 
-    struct Response {
-
+    enum Response {
+      case result(SearchResponse)
+      case error(Error)
     }
-
-    struct ViewModel {
-
-    }
-
   }
 
   enum LoadMore {
-
     struct Request {
 
     }
@@ -32,10 +26,5 @@ enum SearchModel {
     struct Response {
 
     }
-
-    struct ViewModel {
-
-    }
-
   }
 }

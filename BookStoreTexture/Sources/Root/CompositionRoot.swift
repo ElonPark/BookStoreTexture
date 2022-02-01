@@ -35,7 +35,11 @@ enum CompositionRoot {
     return SearchViewController.Factory(
       dependency: SearchViewController.Dependency(
         interactorFactory: SearchInteractor.Factory(
-          dependency: SearchInteractor.Dependency()
+          dependency: SearchInteractor.Dependency(
+            repository: BookStoreRepositoryImpl(
+              networkProvider: Network()
+            )
+          )
         ),
         routerFactory: SearchRouter.Factory(
           dependency: SearchRouter.Dependency()

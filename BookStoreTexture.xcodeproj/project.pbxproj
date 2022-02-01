@@ -21,6 +21,14 @@
 		DB6C9C0527A97AB5003DA727 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */; };
 		DB6C9C0627A97AB5003DA727 /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */; };
 		DB6C9C0727A97AB5003DA727 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */; };
+		DB6C9C0A27A98B01003DA727 /* HasCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0927A98B01003DA727 /* HasCompositeDisposable.swift */; };
+		DB6C9C0C27A98B80003DA727 /* DisposableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0B27A98B80003DA727 /* DisposableExtensions.swift */; };
+		DB6C9C0E27A98C46003DA727 /* DisposablesManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0D27A98C46003DA727 /* DisposablesManageable.swift */; };
+		DB6C9C1227A993D3003DA727 /* SearchViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1127A993D3003DA727 /* SearchViewModels.swift */; };
+		DB6C9C1627A9947C003DA727 /* SearchModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1527A9947C003DA727 /* SearchModelMapper.swift */; };
+		DB6C9C1927A99528003DA727 /* SearchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1827A99528003DA727 /* SearchError.swift */; };
+		DB6C9C1B27A996E4003DA727 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1A27A996E4003DA727 /* SearchResponse.swift */; };
+		DB6C9C2027A99B54003DA727 /* SearchModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1F27A99B54003DA727 /* SearchModelMapperSpec.swift */; };
 		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
 		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
 		DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23627A6B73F00510758 /* Backoff.swift */; };
@@ -99,6 +107,14 @@
 		DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
 		DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		DB6C9C0927A98B01003DA727 /* HasCompositeDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCompositeDisposable.swift; sourceTree = "<group>"; };
+		DB6C9C0B27A98B80003DA727 /* DisposableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposableExtensions.swift; sourceTree = "<group>"; };
+		DB6C9C0D27A98C46003DA727 /* DisposablesManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposablesManageable.swift; sourceTree = "<group>"; };
+		DB6C9C1127A993D3003DA727 /* SearchViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModels.swift; sourceTree = "<group>"; };
+		DB6C9C1527A9947C003DA727 /* SearchModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModelMapper.swift; sourceTree = "<group>"; };
+		DB6C9C1827A99528003DA727 /* SearchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchError.swift; sourceTree = "<group>"; };
+		DB6C9C1A27A996E4003DA727 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		DB6C9C1F27A99B54003DA727 /* SearchModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModelMapperSpec.swift; sourceTree = "<group>"; };
 		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		DBCBD23627A6B73F00510758 /* Backoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backoff.swift; sourceTree = "<group>"; };
@@ -196,10 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */,
-				DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */,
 				DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */,
-				DB6C9BFA27A97AA6003DA727 /* SearchModel.swift */,
 				DB6C9BFB27A97AA6003DA727 /* SearchRouter.swift */,
+				DB6C9C1127A993D3003DA727 /* SearchViewModels.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -208,8 +223,82 @@
 			isa = PBXGroup;
 			children = (
 				DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */,
-				DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */,
 				DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB6C9C0827A98AEF003DA727 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C0B27A98B80003DA727 /* DisposableExtensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DB6C9C0F27A9939D003DA727 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C1027A993A5003DA727 /* Search */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB6C9C1027A993A5003DA727 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9BFA27A97AA6003DA727 /* SearchModel.swift */,
+				DB6C9C1827A99528003DA727 /* SearchError.swift */,
+				DB6C9C1A27A996E4003DA727 /* SearchResponse.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB6C9C1327A99426003DA727 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB6C9C1427A99450003DA727 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C1527A9947C003DA727 /* SearchModelMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB6C9C1D27A99B2E003DA727 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C2127A9BBEE003DA727 /* UseCases */,
+				DB6C9C1E27A99B39003DA727 /* Mapper */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DB6C9C1E27A99B39003DA727 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C1F27A99B54003DA727 /* SearchModelMapperSpec.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB6C9C2127A9BBEE003DA727 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C2227A9BC00003DA727 /* Search */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB6C9C2227A9BC00003DA727 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -226,8 +315,9 @@
 		DB979A2C27931AB000E55AE9 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C1427A99450003DA727 /* Mapper */,
+				DB6C9C0F27A9939D003DA727 /* Models */,
 				DB979A3827931EA400E55AE9 /* UseCases */,
-				DB979A3727931E9400E55AE9 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -310,16 +400,10 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
-		DB979A3727931E9400E55AE9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		DB979A3827931EA400E55AE9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C1327A99426003DA727 /* Search */,
 				DBCBD23027A5C47300510758 /* ReachabilityManager.swift */,
 			);
 			path = UseCases;
@@ -435,6 +519,7 @@
 		DBCBD33827A96C6C00510758 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C0827A98AEF003DA727 /* Extentions */,
 				DBCBD33927A96C8300510758 /* Protocols */,
 			);
 			path = Utilities;
@@ -444,6 +529,8 @@
 			isa = PBXGroup;
 			children = (
 				DBCBD33627A96C4E00510758 /* HasDisposeBag.swift */,
+				DB6C9C0927A98B01003DA727 /* HasCompositeDisposable.swift */,
+				DB6C9C0D27A98C46003DA727 /* DisposablesManageable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -515,6 +602,7 @@
 		DBFE6A6B2763AAC000DAAFBD /* BookStoreTextureTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C1D27A99B2E003DA727 /* Domain */,
 				DBCBD32327A95D5900510758 /* Data */,
 				DBCBD32827A95D5900510758 /* Presentation */,
 				DBCBD32A27A95D5900510758 /* Root */,
@@ -802,18 +890,25 @@
 				DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */,
 				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
+				DB6C9C1B27A996E4003DA727 /* SearchResponse.swift in Sources */,
 				DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */,
 				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
 				DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */,
 				DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */,
 				DBCBD33727A96C4E00510758 /* HasDisposeBag.swift in Sources */,
+				DB6C9C0C27A98B80003DA727 /* DisposableExtensions.swift in Sources */,
+				DB6C9C1927A99528003DA727 /* SearchError.swift in Sources */,
+				DB6C9C0A27A98B01003DA727 /* HasCompositeDisposable.swift in Sources */,
 				DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */,
 				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
 				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
 				DBCBD24F27A6CCCA00510758 /* BooksAPI.swift in Sources */,
+				DB6C9C0E27A98C46003DA727 /* DisposablesManageable.swift in Sources */,
 				DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
+				DB6C9C1227A993D3003DA727 /* SearchViewModels.swift in Sources */,
+				DB6C9C1627A9947C003DA727 /* SearchModelMapper.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
 				DB6C9BFF27A97AA6003DA727 /* SearchModel.swift in Sources */,
 				DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */,
@@ -831,6 +926,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */,
+				DB6C9C2027A99B54003DA727 /* SearchModelMapperSpec.swift in Sources */,
 				DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */,
 				DB6C9C0627A97AB5003DA727 /* SearchInteractorTests.swift in Sources */,
 				DB6C9C0727A97AB5003DA727 /* SearchPresenterTests.swift in Sources */,

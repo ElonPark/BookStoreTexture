@@ -9,6 +9,7 @@
 import Foundation
 
 import Pure
+import RxSwift
 
 /// @mockable
 protocol SearchBusinessLogic: AnyObject {
@@ -26,7 +27,7 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
   // MARK: - DI
 
   struct Dependency {
-
+    let repository: BookStoreRepository
   }
 
   // MARK: - Properties
@@ -34,6 +35,9 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
   var presenter: SearchPresentationLogic?
 
   private let dependency: Dependency
+  private let mapper = SearchModelMapper()
+
+  let serialDisposable = SerialDisposable()
 
   // MARK: - Initializing
 
@@ -42,6 +46,7 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
   }
 
   deinit {
+    serialDisposable.dispose()
     print("deinit: SearchInteractor")
   }
 }
@@ -50,9 +55,15 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
 // MARK: - Business Logic
 
 extension SearchInteractor: SearchBusinessLogic {
-
   func search(request: SearchModel.Search.Request) {
-
+    self.dependency.repository.requestSearchResult(byQuery: request.query)
+      .subscribe(with: self, onSuccess: { `self`, result in
+        let response = self.mapper.mapToSearchResponse(result)
+        self.presenter?.presentSearch(response: response)
+      }, onFailure: { `self`, error in
+        self.presenter?.presentSearch(response: .error(error))
+      })
+      .disposed(by: self.serialDisposable)
   }
 
   func loadMore(request: SearchModel.LoadMore.Request) {
