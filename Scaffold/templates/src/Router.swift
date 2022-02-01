@@ -15,11 +15,15 @@ protocol __SCENE_NAME__RoutingLogic: AnyObject {
 }
 
 protocol __SCENE_NAME__DataPassing: AnyObject {
-
   var dataStore: __SCENE_NAME__DataStore? { get set }
 }
 
-final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing, FactoryModule {
+/// @mockable
+protocol __SCENE_NAME__Routing: __SCENE_NAME__RoutingLogic, __SCENE_NAME__DataPassing {
+
+}
+
+final class __SCENE_NAME__Router: __SCENE_NAME__Routing, FactoryModule {
 
   // MARK: - DI
 
@@ -45,8 +49,9 @@ final class __SCENE_NAME__Router: __SCENE_NAME__DataPassing, FactoryModule {
   }
 }
 
+
 // MARK: - Routing Logic
 
-extension __SCENE_NAME__Router: __SCENE_NAME__RoutingLogic {
+extension __SCENE_NAME__Router {
 
 }

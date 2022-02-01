@@ -10,8 +10,8 @@ import UIKit
 
 import Pure
 
+/// @mockable
 protocol __SCENE_NAME__DisplayLogic: AnyObject {
-
 // clean-swift-scaffold-generate-display-interface (do-not-remove-comments)
 }
 
@@ -27,7 +27,7 @@ final class __SCENE_NAME__ViewController: BaseASViewController, FactoryModule {
 
   // MARK: - Properties
 
-  var router: (__SCENE_NAME__RoutingLogic & __SCENE_NAME__DataPassing)?
+  var router: __SCENE_NAME__Routing?
   var interactor: __SCENE_NAME__BusinessLogic?
 
   private let dependency: Dependency
@@ -66,6 +66,5 @@ final class __SCENE_NAME__ViewController: BaseASViewController, FactoryModule {
 // MARK: - Display Logic
 
 extension __SCENE_NAME__ViewController: __SCENE_NAME__DisplayLogic {
-
 // clean-swift-scaffold-generate-display-implementation (do-not-remove-comments)
 }

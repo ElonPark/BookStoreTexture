@@ -13,21 +13,14 @@ import Nimble
 
 final class __SCENE_NAME__PresenterTests: XCTestCase {
 
-  // MARK: - Test Double Objects
-
-  final class __SCENE_NAME__DisplaySpy: __SCENE_NAME__DisplayLogic {
-
-// clean-swift-scaffold-generate-display-spy (do-not-remove-comments)
-  }
-
   // MARK: - Properties
 
   var presenter: __SCENE_NAME__Presenter!
-  var display: __SCENE_NAME__DisplaySpy!
+  var display: __SCENE_NAME__DisplayLogicMock!
 
   override func setUp() {
     self.presenter = __SCENE_NAME__Presenter()
-    self.display = __SCENE_NAME__DisplaySpy()
+    self.display = __SCENE_NAME__DisplayLogicMock()
     self.presenter.viewController = self.display
   }
 }

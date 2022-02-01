@@ -8,8 +8,8 @@
 
 import UIKit
 
+/// @mockable
 protocol __SCENE_NAME__PresentationLogic: AnyObject {
-
 // clean-swift-scaffold-generate-presenter-interface (do-not-remove-comments)
 }
 
