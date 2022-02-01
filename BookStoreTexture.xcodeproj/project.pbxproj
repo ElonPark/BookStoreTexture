@@ -13,6 +13,14 @@
 		DB0484E0277DF8E8008EB8ED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D4277DCF62008EB8ED /* main.swift */; };
 		DB2B035D27A59253007CBAF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035C27A59253007CBAF3 /* Network.swift */; };
 		DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */; };
+		DB6C9BFC27A97AA6003DA727 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */; };
+		DB6C9BFD27A97AA6003DA727 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */; };
+		DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */; };
+		DB6C9BFF27A97AA6003DA727 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BFA27A97AA6003DA727 /* SearchModel.swift */; };
+		DB6C9C0027A97AA6003DA727 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BFB27A97AA6003DA727 /* SearchRouter.swift */; };
+		DB6C9C0527A97AB5003DA727 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */; };
+		DB6C9C0627A97AB5003DA727 /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */; };
+		DB6C9C0727A97AB5003DA727 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */; };
 		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
 		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
 		DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23627A6B73F00510758 /* Backoff.swift */; };
@@ -83,6 +91,14 @@
 		DB0484D4277DCF62008EB8ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DB2B035C27A59253007CBAF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptor.swift; sourceTree = "<group>"; };
+		DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		DB6C9BFA27A97AA6003DA727 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		DB6C9BFB27A97AA6003DA727 /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
+		DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
 		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		DBCBD23627A6B73F00510758 /* Backoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backoff.swift; sourceTree = "<group>"; };
@@ -174,6 +190,28 @@
 				070286C4B0FF748BBFB52C36 /* Pods-BookStoreTextureTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB6C9BF627A97AA6003DA727 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */,
+				DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */,
+				DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */,
+				DB6C9BFA27A97AA6003DA727 /* SearchModel.swift */,
+				DB6C9BFB27A97AA6003DA727 /* SearchRouter.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB6C9C0127A97AB5003DA727 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C0227A97AB5003DA727 /* SearchViewControllerTests.swift */,
+				DB6C9C0327A97AB5003DA727 /* SearchInteractorTests.swift */,
+				DB6C9C0427A97AB5003DA727 /* SearchPresenterTests.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		DB979A2B27931AA600E55AE9 /* Presentation */ = {
@@ -307,6 +345,7 @@
 		DB979A3F27931F1500E55AE9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9BF627A97AA6003DA727 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -369,6 +408,7 @@
 		DBCBD32927A95D5900510758 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C0127A97AB5003DA727 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -750,13 +790,16 @@
 			files = (
 				DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */,
 				DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */,
+				DB6C9BFD27A97AA6003DA727 /* SearchInteractor.swift in Sources */,
 				DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */,
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
 				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
 				DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
+				DB6C9BFC27A97AA6003DA727 /* SearchViewController.swift in Sources */,
 				DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */,
 				DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */,
+				DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */,
 				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */,
@@ -772,9 +815,11 @@
 				DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
+				DB6C9BFF27A97AA6003DA727 /* SearchModel.swift in Sources */,
 				DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */,
 				DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */,
 				DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */,
+				DB6C9C0027A97AA6003DA727 /* SearchRouter.swift in Sources */,
 				DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */,
 				DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */,
 				DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */,
@@ -787,9 +832,12 @@
 			files = (
 				DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */,
 				DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */,
+				DB6C9C0627A97AB5003DA727 /* SearchInteractorTests.swift in Sources */,
+				DB6C9C0727A97AB5003DA727 /* SearchPresenterTests.swift in Sources */,
 				DBCBD32E27A95D5900510758 /* NetworkErrorDescriptorSpec.swift in Sources */,
 				DBCBD32D27A95D5900510758 /* BookStoreRepositoryTests.swift in Sources */,
 				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,
+				DB6C9C0527A97AB5003DA727 /* SearchViewControllerTests.swift in Sources */,
 				DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
