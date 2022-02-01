@@ -10,12 +10,9 @@
 		2C94F7CB91928C9F6FBBA672 /* Pods_BookStoreTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83C8B2CF52F17D3DC4F51F6 /* Pods_BookStoreTexture.framework */; };
 		67FFB04D42C5FCBD5D51918F /* Pods_BookStoreTexture_BookStoreTextureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */; };
 		DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */; };
-		DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */; };
-		DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */; };
 		DB0484E0277DF8E8008EB8ED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D4277DCF62008EB8ED /* main.swift */; };
 		DB2B035D27A59253007CBAF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035C27A59253007CBAF3 /* Network.swift */; };
 		DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */; };
-		DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */; };
 		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
 		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
 		DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23627A6B73F00510758 /* Backoff.swift */; };
@@ -36,8 +33,11 @@
 		DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */; };
 		DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25627A6EB9000510758 /* SearchResult.swift */; };
 		DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25827A6ED1500510758 /* BookDetails.swift */; };
-		DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */; };
-		DBCBD26227A712E100510758 /* SmartRetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD26127A712E100510758 /* SmartRetryTests.swift */; };
+		DBCBD32D27A95D5900510758 /* BookStoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */; };
+		DBCBD32E27A95D5900510758 /* NetworkErrorDescriptorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */; };
+		DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32727A95D5900510758 /* SmartRetryTests.swift */; };
+		DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */; };
+		DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */; };
 		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
 		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
@@ -77,11 +77,8 @@
 		AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStoreTexture_BookStoreTextureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		DB0484D4277DCF62008EB8ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
-		DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DB2B035C27A59253007CBAF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptor.swift; sourceTree = "<group>"; };
-		DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptorSpec.swift; sourceTree = "<group>"; };
 		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		DBCBD23627A6B73F00510758 /* Backoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backoff.swift; sourceTree = "<group>"; };
@@ -102,8 +99,11 @@
 		DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepository.swift; sourceTree = "<group>"; };
 		DBCBD25627A6EB9000510758 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DBCBD25827A6ED1500510758 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
-		DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepositoryTests.swift; sourceTree = "<group>"; };
-		DBCBD26127A712E100510758 /* SmartRetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRetryTests.swift; sourceTree = "<group>"; };
+		DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreRepositoryTests.swift; sourceTree = "<group>"; };
+		DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptorSpec.swift; sourceTree = "<group>"; };
+		DBCBD32727A95D5900510758 /* SmartRetryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartRetryTests.swift; sourceTree = "<group>"; };
+		DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
 		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				DB979A3B27931ED400E55AE9 /* UI */,
-				DB979A3927931EBC00E55AE9 /* Protocols */,
-				DB979A3A27931EC500E55AE9 /* Extensions */,
 				DB979A3F27931F1500E55AE9 /* Scenes */,
 			);
 			path = Presentation;
@@ -281,25 +279,10 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		DB979A3927931EBC00E55AE9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		DB979A3A27931EC500E55AE9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		DB979A3B27931ED400E55AE9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DB979A3E27931F0900E55AE9 /* Views */,
-				DB979A3D27931EFE00E55AE9 /* BaseComponents */,
+				DBCBD33227A95D9200510758 /* BaseComponents */,
 				DB979A3C27931EE700E55AE9 /* Theme */,
 			);
 			path = UI;
@@ -311,20 +294,6 @@
 				DBF9F5C6279EDAD100E7DAEC /* Theme.swift */,
 			);
 			path = Theme;
-			sourceTree = "<group>";
-		};
-		DB979A3D27931EFE00E55AE9 /* BaseComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseComponents;
-			sourceTree = "<group>";
-		};
-		DB979A3E27931F0900E55AE9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		DB979A3F27931F1500E55AE9 /* Scenes */ = {
@@ -363,14 +332,46 @@
 			path = Backoff;
 			sourceTree = "<group>";
 		};
-		DBCBD25A27A6EED000510758 /* Network */ = {
+		DBCBD32327A95D5900510758 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DB2B036027A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift */,
-				DBCBD25B27A6EEEC00510758 /* BookStoreRepositoryTests.swift */,
-				DBCBD26127A712E100510758 /* SmartRetryTests.swift */,
+				DBCBD32427A95D5900510758 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DBCBD32427A95D5900510758 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */,
+				DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */,
+				DBCBD32727A95D5900510758 /* SmartRetryTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DBCBD32827A95D5900510758 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD32927A95D5900510758 /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DBCBD32927A95D5900510758 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DBCBD32A27A95D5900510758 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */,
+				DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		DBD708A4276773B7001C5390 /* Resources */ = {
@@ -439,9 +440,9 @@
 		DBFE6A6B2763AAC000DAAFBD /* BookStoreTextureTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBD25A27A6EED000510758 /* Network */,
-				DB0484D6277DD46E008EB8ED /* AppDelegateTestDouble.swift */,
-				DB0484DE277DE7CE008EB8ED /* AppDelegateTests.swift */,
+				DBCBD32327A95D5900510758 /* Data */,
+				DBCBD32827A95D5900510758 /* Presentation */,
+				DBCBD32A27A95D5900510758 /* Root */,
 				DBCBD23227A5D01B00510758 /* OutputMocks.swift */,
 			);
 			path = BookStoreTextureTests;
@@ -745,12 +746,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCBD25C27A6EEEC00510758 /* BookStoreRepositoryTests.swift in Sources */,
-				DB0484D7277DD46E008EB8ED /* AppDelegateTestDouble.swift in Sources */,
-				DBCBD26227A712E100510758 /* SmartRetryTests.swift in Sources */,
-				DB0484DF277DE7CE008EB8ED /* AppDelegateTests.swift in Sources */,
+				DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */,
+				DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */,
+				DBCBD32E27A95D5900510758 /* NetworkErrorDescriptorSpec.swift in Sources */,
+				DBCBD32D27A95D5900510758 /* BookStoreRepositoryTests.swift in Sources */,
 				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,
-				DB2B036127A595C5007CBAF3 /* NetworkErrorDescriptorSpec.swift in Sources */,
+				DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
