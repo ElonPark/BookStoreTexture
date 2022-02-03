@@ -73,13 +73,17 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
 
 extension SearchInteractor: SearchBusinessLogic {
   func search(request: SearchModel.Search.Request) {
+    let trimmedQuery = self.trimmedQuery(request.query)
+    let pathAllowedQuery = self.pathAllowedQuery(trimmedQuery)
+    guard let query = pathAllowedQuery, !query.isEmpty else { return }
+
     self.updateLoadingState(isLoading: true)
 
-    self.dependency.repository.requestSearchResult(byQuery: request.query)
+    self.dependency.repository.requestSearchResult(byQuery: query)
       .map(self.mapper.mapToSearchResponse())
       .subscribe(with: self, onSuccess: { `self`, searchResponse in
         self.updateLoadingState(isLoading: false)
-        self.setState(from: searchResponse, with: request.query)
+        self.setState(from: searchResponse, with: query)
         self.presenter?.presentSearch(response: .result(searchResponse))
 
       }, onFailure: { `self`, error in
@@ -87,6 +91,14 @@ extension SearchInteractor: SearchBusinessLogic {
         self.presenter?.presentSearch(response: .error(error))
       })
       .disposed(by: self.serialDisposable)
+  }
+
+  private func trimmedQuery(_ query: String) -> String {
+    return query.trimmingCharacters(in: .whitespacesAndNewlines)
+  }
+
+  private func pathAllowedQuery(_ query: String) -> String? {
+    return query.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
   }
 
   private func updateLoadingState(isLoading: Bool) {
