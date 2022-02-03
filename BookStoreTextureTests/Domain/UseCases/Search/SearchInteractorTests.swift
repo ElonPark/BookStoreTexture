@@ -66,21 +66,27 @@ extension SearchInteractorTests {
     self.repository.requestSearchResultHandler = { _ in
       Single.just(searchResultStub)
     }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
     self.interactor.search(request: request)
 
     // then
     expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    self.presenter.presentSearchHandler = { response in
-      switch response {
-      case let .result(result):
-        expect(result.books.count) == 1
-        expect(result.books.first?.isbn13) == "12345"
-
-      case .error:
-        fail("검색 성공시에는 오류를 반환할 수 없어요.")
-      }
-    }
     expect(self.presenter.presentSearchCallCount) == 1
+    expect(presenterResponse?.books.count) == 1
+    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterError).to(beNil())
   }
 
   func test_검색결과_응답이_오류응답이라면_오류를_반환해요() {
@@ -97,20 +103,26 @@ extension SearchInteractorTests {
     self.repository.requestSearchResultHandler = { _ in
       Single.just(searchResultStub)
     }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
     self.interactor.search(request: request)
 
     // then
     expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    self.presenter.presentSearchHandler = { response in
-      switch response {
-      case .result:
-        fail("검색 실패시에는 결과를 반환할 수 없어요.")
-
-      case let .error(error):
-        expect((error as? SearchError)) == .responseError("test")
-      }
-    }
     expect(self.presenter.presentSearchCallCount) == 1
+    expect(presenterResponse).to(beNil())
+    expect(presenterError as? SearchError) == .responseError("[search] Invalid request")
   }
 
   func test_검색요청이_실패하면_오류를_반환해요() {
@@ -122,20 +134,26 @@ extension SearchInteractorTests {
     self.repository.requestSearchResultHandler = { _ in
       Single.error(error)
     }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
     self.interactor.search(request: request)
 
     // then
     expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    self.presenter.presentSearchHandler = { response in
-      switch response {
-      case .result:
-        fail("검색 실패시에는 결과를 반환할 수 없어요.")
-
-      case let .error(error):
-        expect((error as? URLError)?.code) == .badServerResponse
-      }
-    }
     expect(self.presenter.presentSearchCallCount) == 1
+    expect(presenterResponse).to(beNil())
+    expect((presenterError as? URLError)?.code) == .badServerResponse
   }
 }
 
