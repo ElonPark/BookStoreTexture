@@ -80,7 +80,7 @@ extension SearchInteractor: SearchBusinessLogic {
     guard let query = pathAllowedQuery else { return }
 
     self.updateLoadingState(isLoading: true)
-    self.dependency.repository.requestSearchResult(byQuery: query)
+    self.dependency.repository.requestSearchResultByQuery(query)
       .map(self.mapper.mapToSearchResponse())
       .subscribe(with: self, onSuccess: { `self`, searchResponse in
         self.updateLoadingState(isLoading: false)

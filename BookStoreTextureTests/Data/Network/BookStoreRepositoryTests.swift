@@ -34,7 +34,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query)
+    let response = repository.requestSearchResultByQuery(query)
 
     // then
     let result = try await response.value
@@ -54,7 +54,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query)
+    let response = repository.requestSearchResultByQuery(query)
 
     // then
     let result = try await response.value
@@ -75,7 +75,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query, withNextPageNumber: page)
+    let response = repository.requestSearchResultByQuery(query, withPage: page)
 
     // then
     let result = try await response.value
@@ -97,7 +97,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query, withNextPageNumber: page)
+    let response = repository.requestSearchResultByQuery(query, withPage: page)
 
     // then
     let result = try await response.value

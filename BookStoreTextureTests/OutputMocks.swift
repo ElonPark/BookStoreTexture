@@ -8,7 +8,9 @@ import Foundation
 import Moya
 import Pure
 import Reachability
+import RxRelay
 import RxSwift
+import Then
 @testable import BookStoreTexture
 
 
@@ -16,24 +18,24 @@ class BookStoreRepositoryMock: BookStoreRepository {
     init() { }
 
 
-    private(set) var requestSearchResultCallCount = 0
-    var requestSearchResultHandler: ((String) -> (Single<SearchResult>))?
-    func requestSearchResult(byQuery query: String) -> Single<SearchResult> {
-        requestSearchResultCallCount += 1
-        if let requestSearchResultHandler = requestSearchResultHandler {
-            return requestSearchResultHandler(query)
-        }
-        fatalError("requestSearchResultHandler returns can't have a default value thus its handler must be set")
-    }
-
     private(set) var requestSearchResultByQueryCallCount = 0
-    var requestSearchResultByQueryHandler: ((String, Int) -> (Single<SearchResult>))?
-    func requestSearchResult(byQuery query: String, withNextPageNumber page: Int) -> Single<SearchResult> {
+    var requestSearchResultByQueryHandler: ((String) -> (Single<SearchResult>))?
+    func requestSearchResultByQuery(_ query: String) -> Single<SearchResult> {
         requestSearchResultByQueryCallCount += 1
         if let requestSearchResultByQueryHandler = requestSearchResultByQueryHandler {
-            return requestSearchResultByQueryHandler(query, page)
+            return requestSearchResultByQueryHandler(query)
         }
         fatalError("requestSearchResultByQueryHandler returns can't have a default value thus its handler must be set")
+    }
+
+    private(set) var requestSearchResultByQueryWithPageCallCount = 0
+    var requestSearchResultByQueryWithPageHandler: ((String, Int) -> (Single<SearchResult>))?
+    func requestSearchResultByQuery(_ query: String, withPage page: Int) -> Single<SearchResult> {
+        requestSearchResultByQueryWithPageCallCount += 1
+        if let requestSearchResultByQueryWithPageHandler = requestSearchResultByQueryWithPageHandler {
+            return requestSearchResultByQueryWithPageHandler(query, page)
+        }
+        fatalError("requestSearchResultByQueryWithPageHandler returns can't have a default value thus its handler must be set")
     }
 
     private(set) var requestBookDetailsCallCount = 0

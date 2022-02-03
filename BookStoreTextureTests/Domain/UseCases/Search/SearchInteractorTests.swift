@@ -63,7 +63,7 @@ extension SearchInteractorTests {
     )
 
     // when
-    self.repository.requestSearchResultHandler = { _ in
+    self.repository.requestSearchResultByQueryHandler = { _ in
       Single.just(searchResultStub)
     }
 
@@ -82,8 +82,8 @@ extension SearchInteractorTests {
     self.interactor.search(request: request)
 
     // then
-    expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
     expect(presenterResponse?.books.count) == 1
     expect(presenterResponse?.books.first?.isbn13) == "12345"
@@ -112,7 +112,7 @@ extension SearchInteractorTests {
 
     // when
     var requestQuery: String?
-    self.repository.requestSearchResultHandler = { query in
+    self.repository.requestSearchResultByQueryHandler = { query in
       requestQuery = query
       return Single.just(searchResultStub)
     }
@@ -133,8 +133,8 @@ extension SearchInteractorTests {
 
     // then
     expect(requestQuery) == "swift"
-    expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
     expect(presenterResponse?.books.count) == 1
     expect(presenterResponse?.books.first?.isbn13) == "12345"
@@ -163,7 +163,7 @@ extension SearchInteractorTests {
 
     // when
     var requestQuery: String?
-    self.repository.requestSearchResultHandler = { query in
+    self.repository.requestSearchResultByQueryHandler = { query in
       requestQuery = query
       return Single.just(searchResultStub)
     }
@@ -184,8 +184,8 @@ extension SearchInteractorTests {
 
     // then
     expect(requestQuery) == "swift version".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-    expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
     expect(presenterResponse?.books.count) == 1
     expect(presenterResponse?.books.first?.isbn13) == "12345"
@@ -213,7 +213,7 @@ extension SearchInteractorTests {
     )
 
     // when
-    self.repository.requestSearchResultHandler = { _ in
+    self.repository.requestSearchResultByQueryHandler = { _ in
       Single.just(searchResultStub)
     }
 
@@ -232,7 +232,7 @@ extension SearchInteractorTests {
     self.interactor.search(request: request)
 
     // then
-    expect(self.repository.requestSearchResultCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 0
     expect(self.presenter.presentSearchCallCount) == 0
     expect(presenterResponse).to(beNil())
     expect(presenterError).to(beNil())
@@ -259,43 +259,7 @@ extension SearchInteractorTests {
     )
 
     // when
-    self.repository.requestSearchResultHandler = { _ in
-      Single.just(searchResultStub)
-    }
-
-    var presenterResponse: SearchResponse?
-    var presenterError: Error?
-    self.presenter.presentSearchHandler = { response in
-      switch response {
-      case let .result(result):
-        presenterResponse = result
-
-      case let .error(error):
-        presenterError = error
-      }
-    }
-
-    self.interactor.search(request: request)
-
-    // then
-    expect(self.repository.requestSearchResultCallCount) == 0
-    expect(self.presenter.presentSearchCallCount) == 0
-    expect(presenterResponse).to(beNil())
-    expect(presenterError).to(beNil())
-  }
-
-  func test_검색결과_응답이_오류응답이라면_오류를_반환해요() {
-    // given
-    let request = SearchModel.Search.Request(query: "swift")
-    let searchResultStub = SearchResult(
-      error: "[search] Invalid request",
-      total: nil,
-      page: nil,
-      books: nil
-    )
-
-    // when
-    self.repository.requestSearchResultHandler = { _ in
+    self.repository.requestSearchResultByQueryHandler = { _ in
       Single.just(searchResultStub)
     }
 
@@ -315,7 +279,43 @@ extension SearchInteractorTests {
 
     // then
     expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.presenter.presentSearchCallCount) == 0
+    expect(presenterResponse).to(beNil())
+    expect(presenterError).to(beNil())
+  }
+
+  func test_검색결과_응답이_오류응답이라면_오류를_반환해요() {
+    // given
+    let request = SearchModel.Search.Request(query: "swift")
+    let searchResultStub = SearchResult(
+      error: "[search] Invalid request",
+      total: nil,
+      page: nil,
+      books: nil
+    )
+
+    // when
+    self.repository.requestSearchResultByQueryHandler = { _ in
+      Single.just(searchResultStub)
+    }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
+    self.interactor.search(request: request)
+
+    // then
+    expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
     expect(presenterResponse).to(beNil())
     expect(presenterError as? SearchError) == .responseError("[search] Invalid request")
@@ -327,7 +327,7 @@ extension SearchInteractorTests {
     let error = URLError(.badServerResponse)
 
     // when
-    self.repository.requestSearchResultHandler = { _ in
+    self.repository.requestSearchResultByQueryHandler = { _ in
       Single.error(error)
     }
 
@@ -346,8 +346,8 @@ extension SearchInteractorTests {
     self.interactor.search(request: request)
 
     // then
-    expect(self.repository.requestSearchResultByQueryCallCount) == 0
-    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
+    expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
     expect(presenterResponse).to(beNil())
     expect((presenterError as? URLError)?.code) == .badServerResponse
