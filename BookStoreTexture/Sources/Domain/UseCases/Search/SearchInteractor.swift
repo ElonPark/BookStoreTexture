@@ -74,11 +74,12 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
 extension SearchInteractor: SearchBusinessLogic {
   func search(request: SearchModel.Search.Request) {
     let trimmedQuery = self.trimmedQuery(request.query)
+    guard !trimmedQuery.isEmpty else { return }
+
     let pathAllowedQuery = self.pathAllowedQuery(trimmedQuery)
-    guard let query = pathAllowedQuery, !query.isEmpty else { return }
+    guard let query = pathAllowedQuery else { return }
 
     self.updateLoadingState(isLoading: true)
-
     self.dependency.repository.requestSearchResult(byQuery: query)
       .map(self.mapper.mapToSearchResponse())
       .subscribe(with: self, onSuccess: { `self`, searchResponse in
