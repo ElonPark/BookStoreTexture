@@ -13,7 +13,7 @@ enum SearchModel {
     }
 
     enum Response {
-      case result(SearchResponse)
+      case result([SearchResponse.Book])
       case error(Error)
     }
   }

@@ -67,7 +67,7 @@ extension SearchInteractorTests {
       Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -85,8 +85,8 @@ extension SearchInteractorTests {
     expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
     expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
-    expect(presenterResponse?.books.count) == 1
-    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterResponse?.count) == 1
+    expect(presenterResponse?.first?.isbn13) == "12345"
     expect(presenterError).to(beNil())
   }
 
@@ -117,7 +117,7 @@ extension SearchInteractorTests {
       return Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -136,8 +136,8 @@ extension SearchInteractorTests {
     expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
     expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
-    expect(presenterResponse?.books.count) == 1
-    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterResponse?.count) == 1
+    expect(presenterResponse?.first?.isbn13) == "12345"
     expect(presenterError).to(beNil())
   }
 
@@ -168,7 +168,7 @@ extension SearchInteractorTests {
       return Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -187,8 +187,8 @@ extension SearchInteractorTests {
     expect(self.repository.requestSearchResultByQueryWithPageCallCount) == 0
     expect(self.repository.requestSearchResultByQueryCallCount) == 1
     expect(self.presenter.presentSearchCallCount) == 1
-    expect(presenterResponse?.books.count) == 1
-    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterResponse?.count) == 1
+    expect(presenterResponse?.first?.isbn13) == "12345"
     expect(presenterError).to(beNil())
   }
 
@@ -217,7 +217,7 @@ extension SearchInteractorTests {
       Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -263,7 +263,7 @@ extension SearchInteractorTests {
       Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -299,7 +299,7 @@ extension SearchInteractorTests {
       Single.just(searchResultStub)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {
@@ -331,7 +331,7 @@ extension SearchInteractorTests {
       Single.error(error)
     }
 
-    var presenterResponse: SearchResponse?
+    var presenterResponse: [SearchResponse.Book]?
     var presenterError: Error?
     self.presenter.presentSearchHandler = { response in
       switch response {

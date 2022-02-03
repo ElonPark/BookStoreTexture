@@ -85,7 +85,7 @@ extension SearchInteractor: SearchBusinessLogic {
       .subscribe(with: self, onSuccess: { `self`, searchResponse in
         self.updateLoadingState(isLoading: false)
         self.setState(from: searchResponse, with: query)
-        self.presenter?.presentSearch(response: .result(searchResponse))
+        self.presenter?.presentSearch(response: .result(self.state.books))
 
       }, onFailure: { `self`, error in
         self.updateLoadingState(isLoading: false)
