@@ -23,8 +23,9 @@ enum SearchModel {
 
     }
 
-    struct Response {
-
+    enum Response {
+      case result([SearchResponse.Book])
+      case error(Error)
     }
   }
 }

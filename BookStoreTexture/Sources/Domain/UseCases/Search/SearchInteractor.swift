@@ -118,6 +118,47 @@ extension SearchInteractor: SearchBusinessLogic {
   }
 
   func loadMore(request: SearchModel.LoadMore.Request) {
+    let currentState = self.state
+    guard
+      self.shouldRequestNextPageSearchResult(from: currentState),
+      let query = currentState.searchQuery
+    else { return }
 
+    let page = currentState.currentPage + 1
+
+    self.updateLoadingState(isLoading: true)
+    self.dependency.repository.requestSearchResultByQuery(query, withPage: page)
+      .map(self.mapper.mapToSearchResponse())
+      .subscribe(with: self, onSuccess: { `self`, searchResponse in
+        self.updateLoadingState(isLoading: false)
+        self.updateState(from: searchResponse)
+        self.presenter?.presentLoadMore(response: .result(self.state.books))
+
+      }, onFailure: { `self`, error in
+        self.updateLoadingState(isLoading: false)
+        self.presenter?.presentLoadMore(response: .error(error))
+      })
+      .disposed(by: self.serialDisposable)
+  }
+
+  private func shouldRequestNextPageSearchResult(from state: State) -> Bool {
+    return self.isRequestableState(from: state) && self.hasNextPageSearchResult(from: state)
+  }
+
+  private func isRequestableState(from state: State) -> Bool {
+    return !state.isLoading && !state.searchQuery.isNilOrEmpty
+  }
+
+  private func hasNextPageSearchResult(from state: State) -> Bool {
+    let leftItemCount = state.total - state.books.count
+    return leftItemCount > 0
+  }
+
+  private func updateState(from searchResponse: SearchResponse) {
+    self.state = self.state.with {
+      $0.total = searchResponse.total
+      $0.currentPage = searchResponse.page
+      $0.books += searchResponse.books
+    }
   }
 }
