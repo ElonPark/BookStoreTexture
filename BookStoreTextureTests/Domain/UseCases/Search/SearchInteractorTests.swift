@@ -90,6 +90,108 @@ extension SearchInteractorTests {
     expect(presenterError).to(beNil())
   }
 
+  func test_검색어의_앞뒤_공백과_개행은_제거하고_요청해요() {
+    // given
+    let request = SearchModel.Search.Request(query: "  swift  \n")
+    let searchResultStub = SearchResult(
+      error: "0",
+      total: "1",
+      page: "1",
+      books: [
+        SearchResult.Book(
+          title: "test",
+          subtitle: "test",
+          isbn13: "12345",
+          price: "99.99",
+          image: nil,
+          url: nil,
+          pdf: nil
+        )
+      ]
+    )
+
+    // when
+    var requestQuery: String?
+    self.repository.requestSearchResultHandler = { query in
+      requestQuery = query
+      return Single.just(searchResultStub)
+    }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
+    self.interactor.search(request: request)
+
+    // then
+    expect(requestQuery) == "swift"
+    expect(self.repository.requestSearchResultByQueryCallCount) == 0
+    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.presenter.presentSearchCallCount) == 1
+    expect(presenterResponse?.books.count) == 1
+    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterError).to(beNil())
+  }
+
+  func test_검색어는_인코딩해서_요청해요() {
+    // given
+    let request = SearchModel.Search.Request(query: "swift version")
+    let searchResultStub = SearchResult(
+      error: "0",
+      total: "1",
+      page: "1",
+      books: [
+        SearchResult.Book(
+          title: "test",
+          subtitle: "test",
+          isbn13: "12345",
+          price: "99.99",
+          image: nil,
+          url: nil,
+          pdf: nil
+        )
+      ]
+    )
+
+    // when
+    var requestQuery: String?
+    self.repository.requestSearchResultHandler = { query in
+      requestQuery = query
+      return Single.just(searchResultStub)
+    }
+
+    var presenterResponse: SearchResponse?
+    var presenterError: Error?
+    self.presenter.presentSearchHandler = { response in
+      switch response {
+      case let .result(result):
+        presenterResponse = result
+
+      case let .error(error):
+        presenterError = error
+      }
+    }
+
+    self.interactor.search(request: request)
+
+    // then
+    expect(requestQuery) == "swift version".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+    expect(self.repository.requestSearchResultByQueryCallCount) == 0
+    expect(self.repository.requestSearchResultCallCount) == 1
+    expect(self.presenter.presentSearchCallCount) == 1
+    expect(presenterResponse?.books.count) == 1
+    expect(presenterResponse?.books.first?.isbn13) == "12345"
+    expect(presenterError).to(beNil())
+  }
+
   func test_검색어가_공백이라면_검색을_요청하지_않아요() {
     // given
     let request = SearchModel.Search.Request(query: " ")
