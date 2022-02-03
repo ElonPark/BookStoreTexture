@@ -10,6 +10,8 @@ import Foundation
 
 import Pure
 import RxSwift
+import RxRelay
+import Then
 
 /// @mockable
 protocol SearchBusinessLogic: AnyObject {
@@ -24,6 +26,15 @@ protocol SearchDataStore: AnyObject {
 
 final class SearchInteractor: SearchDataStore, FactoryModule {
 
+  private struct State: Then, Equatable {
+    var isLoading: Bool = false
+
+    var total: Int = 0
+    var currentPage: Int = 0
+    var searchQuery: String?
+    var books = [SearchResponse.Book]()
+  }
+
   // MARK: - DI
 
   struct Dependency {
@@ -37,7 +48,13 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
   private let dependency: Dependency
   private let mapper = SearchModelMapper()
 
-  let serialDisposable = SerialDisposable()
+  private let currentState = BehaviorRelay(value: State())
+  private var state: State {
+    get { self.currentState.value }
+    set { self.currentState.accept(newValue) }
+  }
+
+  private let serialDisposable = SerialDisposable()
 
   // MARK: - Initializing
 
@@ -56,14 +73,35 @@ final class SearchInteractor: SearchDataStore, FactoryModule {
 
 extension SearchInteractor: SearchBusinessLogic {
   func search(request: SearchModel.Search.Request) {
+    self.updateLoadingState(isLoading: true)
+
     self.dependency.repository.requestSearchResult(byQuery: request.query)
-      .subscribe(with: self, onSuccess: { `self`, result in
-        let response = self.mapper.mapToSearchResponse(result)
-        self.presenter?.presentSearch(response: response)
+      .map(self.mapper.mapToSearchResponse())
+      .subscribe(with: self, onSuccess: { `self`, searchResponse in
+        self.updateLoadingState(isLoading: false)
+        self.setState(from: searchResponse, with: request.query)
+        self.presenter?.presentSearch(response: .result(searchResponse))
+
       }, onFailure: { `self`, error in
+        self.updateLoadingState(isLoading: false)
         self.presenter?.presentSearch(response: .error(error))
       })
       .disposed(by: self.serialDisposable)
+  }
+
+  private func updateLoadingState(isLoading: Bool) {
+    self.state = self.state.with {
+      $0.isLoading = isLoading
+    }
+  }
+
+  private func setState(from searchResponse: SearchResponse, with searchQuery: String) {
+    self.state = self.state.with {
+      $0.searchQuery = searchQuery
+      $0.total = searchResponse.total
+      $0.currentPage = searchResponse.page
+      $0.books = searchResponse.books
+    }
   }
 
   func loadMore(request: SearchModel.LoadMore.Request) {

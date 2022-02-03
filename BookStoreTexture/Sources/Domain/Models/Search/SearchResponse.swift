@@ -7,16 +7,15 @@
 
 import Foundation
 
-struct SearchResponse {
+struct SearchResponse: Hashable {
   let total: Int
-  let resultCount: Int
   let page: Int
   let books: [Book]
 }
 
 extension SearchResponse {
   struct Book: Decodable, Hashable {
-    let title: String
+    let title: String?
     let subtitle: String?
     let isbn13: String?
     let price: String
