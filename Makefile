@@ -10,7 +10,7 @@ setup_scmake:
 	rm go.sum
 
 mock:
-	mockolo -s ./BookStoreTexture/Sources -d ./BookStoreTextureTests/OutputMocks.swift -i BookStoreTexture --use-mock-observable
+	mockolo -s ./BookStoreTexture/Sources -d ./BookStoreTextureTests/OutputMocks.swift -i BookStoreTexture --use-mock-observable --exclude-imports UIKit
 
 test:
 	bundle exec fastlane ios ci_test

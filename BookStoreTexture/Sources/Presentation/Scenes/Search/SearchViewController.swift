@@ -1,9 +1,9 @@
 //
-//  __SCENE_NAME__ViewController.swift
-//  __TARGET_PROJECT_NAME__
+//  SearchViewController.swift
+//  BookStoreTexture
 //
-//  Created by __COPYRIGHT__ on __DATE__.
-//  Copyright © __YEAR__ __COPYRIGHT__. All rights reserved.
+//  Created by Elon Park on 1/2/2022.
+//  Copyright © 2022 Elon Park. All rights reserved.
 //
 
 import UIKit
@@ -11,24 +11,25 @@ import UIKit
 import Pure
 
 /// @mockable
-protocol __SCENE_NAME__DisplayLogic: AnyObject {
-// clean-swift-scaffold-generate-display-interface (do-not-remove-comments)
+protocol SearchDisplayLogic: AnyObject {
+  func displaySearch(viewModel: SearchModel.Search.ViewModel)
+  func displayLoadMore(viewModel: SearchModel.LoadMore.ViewModel)
 }
 
-final class __SCENE_NAME__ViewController: BaseASViewController, FactoryModule {
+final class SearchViewController: BaseASViewController, FactoryModule {
 
   // MARK: DI
 
   struct Dependency {
-    let interactorFactory: __SCENE_NAME__Interactor.Factory
-    let routerFactory: __SCENE_NAME__Router.Factory
+    let interactorFactory: SearchInteractor.Factory
+    let routerFactory: SearchRouter.Factory
   }
 
 
   // MARK: - Properties
 
-  var router: __SCENE_NAME__Routing?
-  var interactor: __SCENE_NAME__BusinessLogic?
+  var router: SearchRouting?
+  var interactor: SearchBusinessLogic?
 
   private let dependency: Dependency
 
@@ -65,6 +66,12 @@ final class __SCENE_NAME__ViewController: BaseASViewController, FactoryModule {
 
 // MARK: - Display Logic
 
-extension __SCENE_NAME__ViewController: __SCENE_NAME__DisplayLogic {
-// clean-swift-scaffold-generate-display-implementation (do-not-remove-comments)
+extension SearchViewController: SearchDisplayLogic {
+  func displaySearch(viewModel: SearchModel.Search.ViewModel) {
+
+  }
+
+  func displayLoadMore(viewModel: SearchModel.LoadMore.ViewModel) {
+
+  }
 }

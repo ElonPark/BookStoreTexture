@@ -10,11 +10,12 @@ import Foundation
 
 import Pure
 
+/// @mockable
 protocol __SCENE_NAME__BusinessLogic: AnyObject {
-
 // clean-swift-scaffold-generate-business-interface (do-not-remove-comments)
 }
 
+/// @mockable
 protocol __SCENE_NAME__DataStore: AnyObject {
 
 }
@@ -43,6 +44,7 @@ final class __SCENE_NAME__Interactor: __SCENE_NAME__DataStore, FactoryModule {
     print("deinit: __SCENE_NAME__Interactor")
   }
 }
+
 
 // MARK: - Business Logic
 

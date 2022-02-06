@@ -14,18 +14,13 @@ import Pure
 
 final class __SCENE_NAME__InteractorTests: XCTestCase {
 
-  final class __SCENE_NAME__PresenterSpy: __SCENE_NAME__PresentationLogic {
-
-// clean-swift-scaffold-generate-presenter-spy (do-not-remove-comments)
-  }
-
   // MARK: - Properties
 
-  var presenter: __SCENE_NAME__PresenterSpy!
+  var presenter: __SCENE_NAME__PresentationLogicMock!
   var interactor: __SCENE_NAME__Interactor!
 
   override func setUp() {
-    self.presenter = __SCENE_NAME__PresenterSpy()
+    self.presenter = __SCENE_NAME__PresentationLogicMock()
     self.interactor = self.createInteractor()
   }
 
@@ -37,6 +32,7 @@ final class __SCENE_NAME__InteractorTests: XCTestCase {
     return interactor
   }
 }
+
 
 // MARK: - TODO TestName (BDD)
 
@@ -50,6 +46,7 @@ extension __SCENE_NAME__InteractorTests {
     // then
   }
 }
+
 
 // MARK: - Factory Dummy
 

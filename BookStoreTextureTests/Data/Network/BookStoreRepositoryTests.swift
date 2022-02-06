@@ -34,7 +34,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query)
+    let response = repository.requestSearchResultByQuery(query)
 
     // then
     let result = try await response.value
@@ -54,7 +54,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query)
+    let response = repository.requestSearchResultByQuery(query)
 
     // then
     let result = try await response.value
@@ -75,12 +75,13 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query, withNextPageNumber: page)
+    let response = repository.requestSearchResultByQuery(query, withPage: page)
 
     // then
     let result = try await response.value
     expect(result.error) == "0"
     expect(result.books?.first?.isbn13).notTo(beNil())
+    expect(result.books?.first?.pdf).to(beNil())
   }
 
   func test_검색결과_다음페이지_요청시_에러응답이_내려와도_정상적으로_변환되는지_테스트해요() async throws {
@@ -96,7 +97,7 @@ extension BookStoreRepositoryTests {
     self.repository = self.makeRepository(network: network)
 
     // when
-    let response = repository.requestSearchResult(byQuery: query, withNextPageNumber: page)
+    let response = repository.requestSearchResultByQuery(query, withPage: page)
 
     // then
     let result = try await response.value
@@ -122,6 +123,7 @@ extension BookStoreRepositoryTests {
     let result = try await response.value
     expect(result.error) == "0"
     expect(result.isbn13) == "9781617294136"
+    expect(result.pdf).notTo(beNil())
   }
 
   func test_책_상세정보_요청시_에러응답이_내려와도_정상적으로_변환되는지_테스트해요() async throws {
@@ -142,5 +144,6 @@ extension BookStoreRepositoryTests {
     let result = try await response.value
     expect(result.error) != "0"
     expect(result.isbn13).to(beNil())
+    expect(result.pdf).to(beNil())
   }
 }

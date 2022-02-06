@@ -14,28 +14,16 @@ import Pure
 
 final class __SCENE_NAME__ViewControllerTests: XCTestCase {
 
-  // MARK: - Test Double Objects
-
-  final class __SCENE_NAME__InteractorSpy: __SCENE_NAME__BusinessLogic {
-
-// clean-swift-scaffold-generate-business-spy (do-not-remove-comments)
-  }
-
-  final class __SCENE_NAME__RouterSpy: __SCENE_NAME__RoutingLogic, __SCENE_NAME__DataPassing {
-
-    var dataStore: __SCENE_NAME__DataStore?
-
-  }
-
   // MARK: - Properties
 
-  var interactor: __SCENE_NAME__InteractorSpy!
-  var router: __SCENE_NAME__RouterSpy!
+  var interactor: __SCENE_NAME__BusinessLogicMock!
+  var dataStore: __SCENE_NAME__DataStoreMock!
+  var router: __SCENE_NAME__RoutingMock!
   var viewController: __SCENE_NAME__ViewController!
 
   override func setUp() {
-    self.interactor = __SCENE_NAME__InteractorSpy()
-    self.router = __SCENE_NAME__RouterSpy()
+    self.interactor = __SCENE_NAME__BusinessLogicMock()
+    self.router = __SCENE_NAME__RoutingMock()
     self.viewController = self.createViewController()
   }
 
@@ -48,9 +36,11 @@ final class __SCENE_NAME__ViewControllerTests: XCTestCase {
     ).create()
     viewController.interactor = self.interactor
     viewController.router = self.router
+
     return viewController
   }
 }
+
 
 // MARK: - TODO TestName (BDD)
 
@@ -64,6 +54,7 @@ extension __SCENE_NAME__ViewControllerTests {
     // then
   }
 }
+
 
 // MARK: - Factory Dummy
 

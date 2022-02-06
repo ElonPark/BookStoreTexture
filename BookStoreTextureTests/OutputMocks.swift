@@ -6,8 +6,11 @@
 
 import Foundation
 import Moya
+import Pure
 import Reachability
+import RxRelay
 import RxSwift
+import Then
 @testable import BookStoreTexture
 
 
@@ -15,24 +18,24 @@ class BookStoreRepositoryMock: BookStoreRepository {
     init() { }
 
 
-    private(set) var requestSearchResultCallCount = 0
-    var requestSearchResultHandler: ((String) -> (Single<SearchResult>))?
-    func requestSearchResult(byQuery query: String) -> Single<SearchResult> {
-        requestSearchResultCallCount += 1
-        if let requestSearchResultHandler = requestSearchResultHandler {
-            return requestSearchResultHandler(query)
-        }
-        fatalError("requestSearchResultHandler returns can't have a default value thus its handler must be set")
-    }
-
     private(set) var requestSearchResultByQueryCallCount = 0
-    var requestSearchResultByQueryHandler: ((String, Int) -> (Single<SearchResult>))?
-    func requestSearchResult(byQuery query: String, withNextPageNumber page: Int) -> Single<SearchResult> {
+    var requestSearchResultByQueryHandler: ((String) -> (Single<SearchResult>))?
+    func requestSearchResultByQuery(_ query: String) -> Single<SearchResult> {
         requestSearchResultByQueryCallCount += 1
         if let requestSearchResultByQueryHandler = requestSearchResultByQueryHandler {
-            return requestSearchResultByQueryHandler(query, page)
+            return requestSearchResultByQueryHandler(query)
         }
         fatalError("requestSearchResultByQueryHandler returns can't have a default value thus its handler must be set")
+    }
+
+    private(set) var requestSearchResultByQueryWithPageCallCount = 0
+    var requestSearchResultByQueryWithPageHandler: ((String, Int) -> (Single<SearchResult>))?
+    func requestSearchResultByQuery(_ query: String, withPage page: Int) -> Single<SearchResult> {
+        requestSearchResultByQueryWithPageCallCount += 1
+        if let requestSearchResultByQueryWithPageHandler = requestSearchResultByQueryWithPageHandler {
+            return requestSearchResultByQueryWithPageHandler(query, page)
+        }
+        fatalError("requestSearchResultByQueryWithPageHandler returns can't have a default value thus its handler must be set")
     }
 
     private(set) var requestBookDetailsCallCount = 0
@@ -59,5 +62,97 @@ class ReachabilityManageableMock: ReachabilityManageable {
         }
         
     }
+}
+
+class SearchPresentationLogicMock: SearchPresentationLogic {
+    init() { }
+
+
+    private(set) var presentSearchCallCount = 0
+    var presentSearchHandler: ((SearchModel.Search.Response) -> ())?
+    func presentSearch(response: SearchModel.Search.Response)  {
+        presentSearchCallCount += 1
+        if let presentSearchHandler = presentSearchHandler {
+            presentSearchHandler(response)
+        }
+        
+    }
+
+    private(set) var presentLoadMoreCallCount = 0
+    var presentLoadMoreHandler: ((SearchModel.LoadMore.Response) -> ())?
+    func presentLoadMore(response: SearchModel.LoadMore.Response)  {
+        presentLoadMoreCallCount += 1
+        if let presentLoadMoreHandler = presentLoadMoreHandler {
+            presentLoadMoreHandler(response)
+        }
+        
+    }
+}
+
+class SearchDisplayLogicMock: SearchDisplayLogic {
+    init() { }
+
+
+    private(set) var displaySearchCallCount = 0
+    var displaySearchHandler: ((SearchModel.Search.ViewModel) -> ())?
+    func displaySearch(viewModel: SearchModel.Search.ViewModel)  {
+        displaySearchCallCount += 1
+        if let displaySearchHandler = displaySearchHandler {
+            displaySearchHandler(viewModel)
+        }
+        
+    }
+
+    private(set) var displayLoadMoreCallCount = 0
+    var displayLoadMoreHandler: ((SearchModel.LoadMore.ViewModel) -> ())?
+    func displayLoadMore(viewModel: SearchModel.LoadMore.ViewModel)  {
+        displayLoadMoreCallCount += 1
+        if let displayLoadMoreHandler = displayLoadMoreHandler {
+            displayLoadMoreHandler(viewModel)
+        }
+        
+    }
+}
+
+class SearchBusinessLogicMock: SearchBusinessLogic {
+    init() { }
+
+
+    private(set) var searchCallCount = 0
+    var searchHandler: ((SearchModel.Search.Request) -> ())?
+    func search(request: SearchModel.Search.Request)  {
+        searchCallCount += 1
+        if let searchHandler = searchHandler {
+            searchHandler(request)
+        }
+        
+    }
+
+    private(set) var loadMoreCallCount = 0
+    var loadMoreHandler: ((SearchModel.LoadMore.Request) -> ())?
+    func loadMore(request: SearchModel.LoadMore.Request)  {
+        loadMoreCallCount += 1
+        if let loadMoreHandler = loadMoreHandler {
+            loadMoreHandler(request)
+        }
+        
+    }
+}
+
+class SearchRoutingMock: SearchRouting {
+    init() { }
+    init(dataStore: SearchDataStore? = nil) {
+        self.dataStore = dataStore
+    }
+
+
+    private(set) var dataStoreSetCallCount = 0
+    var dataStore: SearchDataStore? = nil { didSet { dataStoreSetCallCount += 1 } }
+}
+
+class SearchDataStoreMock: SearchDataStore {
+    init() { }
+
+
 }
 

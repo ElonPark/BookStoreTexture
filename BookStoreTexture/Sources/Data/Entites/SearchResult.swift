@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - SearchResult
 
-struct SearchResult: Decodable, Hashable {
+struct SearchResult: Decodable {
   let error: String
   let total: String?
   let page: String?
@@ -20,12 +20,13 @@ struct SearchResult: Decodable, Hashable {
 // MARK: - SearchResult.Book
 
 extension SearchResult {
-  struct Book: Decodable, Hashable {
-    let title: String
-    let subtitle: String
-    let isbn13: String
-    let price: String
-    let image: String
-    let url: String
+  struct Book: Decodable {
+    let title: String?
+    let subtitle: String?
+    let isbn13: String?
+    let price: String?
+    let image: String?
+    let url: String?
+    let pdf: [String: String]?
   }
 }
