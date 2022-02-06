@@ -15,7 +15,8 @@ target 'BookStoreTexture' do
 
   # UI
   pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git'
-
+  pod 'BookStoreTextureUI', :path => './libs/BookStoreTextureUI'
+  
   # Common
   pod 'Then'
   pod 'EPLogger'
@@ -30,5 +31,17 @@ target 'BookStoreTexture' do
 
   target 'BookStoreTextureUITests' do
     # Pods for testing
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+
+      if Gem::Version.new('9.0') > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+    end
   end
 end

@@ -30,11 +30,8 @@
 		DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */; };
 		DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */; };
 		DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33327A95DA200510758 /* BaseASController.swift */; };
-		DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */; };
 		DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */; };
-		DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9F5C6279EDAD100E7DAEC /* Theme.swift */; };
 		DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */; };
-		DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A592763AABF00DAAFBD /* ViewController.swift */; };
 		DBFE6A5F2763AAC000DAAFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFE6A5E2763AAC000DAAFBD /* Assets.xcassets */; };
 		DBFE6A622763AAC000DAAFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFE6A602763AAC000DAAFBD /* LaunchScreen.storyboard */; };
 		DBFE6A772763AAC000DAAFBD /* BookStoreTextureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE6A762763AAC000DAAFBD /* BookStoreTextureUITests.swift */; };
@@ -90,12 +87,9 @@
 		DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
 		DBCBD33327A95DA200510758 /* BaseASController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASController.swift; sourceTree = "<group>"; };
-		DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDisplayNode.swift; sourceTree = "<group>"; };
 		DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		DBF9F5C6279EDAD100E7DAEC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBFE6A522763AABF00DAAFBD /* BookStoreTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE6A552763AABF00DAAFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBFE6A592763AABF00DAAFBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBFE6A5E2763AAC000DAAFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBFE6A612763AAC000DAAFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBFE6A632763AAC000DAAFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -275,17 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				DBCBD33227A95D9200510758 /* BaseComponents */,
-				DB979A3C27931EE700E55AE9 /* Theme */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		DB979A3C27931EE700E55AE9 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				DBF9F5C6279EDAD100E7DAEC /* Theme.swift */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		DB979A3F27931F1500E55AE9 /* Scenes */ = {
@@ -325,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				DBCBD33327A95DA200510758 /* BaseASController.swift */,
-				DBCBD33A27A96CEB00510758 /* BaseDisplayNode.swift */,
 				DBCBD33C27A96F7200510758 /* BaseNavigationController.swift */,
 			);
 			path = BaseComponents;
@@ -347,7 +331,6 @@
 				DB979A2C27931AB000E55AE9 /* Domain */,
 				DB979A2B27931AA600E55AE9 /* Presentation */,
 				DBD708A627677516001C5390 /* Root */,
-				DBFE6A592763AABF00DAAFBD /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -676,17 +659,14 @@
 				DB6C9BFC27A97AA6003DA727 /* SearchViewController.swift in Sources */,
 				DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */,
 				DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */,
-				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB6C9C1B27A996E4003DA727 /* SearchResponse.swift in Sources */,
 				DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */,
-				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
 				DB6C9C1927A99528003DA727 /* SearchError.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DB6C9C1227A993D3003DA727 /* SearchViewModels.swift in Sources */,
 				DB6C9C1627A9947C003DA727 /* SearchModelMapper.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
 				DB6C9BFF27A97AA6003DA727 /* SearchModel.swift in Sources */,
-				DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */,
 				DB6C9C0027A97AA6003DA727 /* SearchRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

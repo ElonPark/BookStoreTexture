@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.5.0)
+  - BookStoreTextureUI (0.1.0):
+    - Texture
+    - Then
   - DataLayer (0.1.0):
     - EPLogger
     - Moya/RxSwift (~> 15.0)
@@ -66,6 +69,7 @@ PODS:
     - RxSwift
 
 DEPENDENCIES:
+  - BookStoreTextureUI (from `./libs/BookStoreTextureUI`)
   - DataLayer (from `./libs/DataLayer`)
   - EPLogger
   - Nimble
@@ -94,6 +98,8 @@ SPEC REPOS:
     - Then
 
 EXTERNAL SOURCES:
+  BookStoreTextureUI:
+    :path: "./libs/BookStoreTextureUI"
   DataLayer:
     :path: "./libs/DataLayer"
   Texture:
@@ -108,6 +114,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  BookStoreTextureUI: 5ce1dc19f7d97c388c0191fcc660ec3b91e79a90
   DataLayer: 157321d7f9e204c95769cbb8e887e0e37f0a613b
   EPLogger: 80c538bd85305dc750929adc7229e93fe6faa70c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -126,6 +133,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Utility: d0fe356a0df9a30e49fb6ff64b25e910f176a067
 
-PODFILE CHECKSUM: d9e85504c0338b87b777fa3de600390b854670c5
+PODFILE CHECKSUM: 9fa91daabdbced41cf939b23ea33ca66feb04fdd
 
 COCOAPODS: 1.11.2

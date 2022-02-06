@@ -1,5 +1,5 @@
 //
-//  BaseDisplayNode.swift
+//  BSTDisplayNode.swift
 //  BookStoreTexture
 //
 //  Created by Elon on 2022/02/01.
@@ -7,9 +7,9 @@
 
 import AsyncDisplayKit
 
-class BaseDisplayNode: ASDisplayNode {
+open class BSTDisplayNode: ASDisplayNode {
 
-  override init() {
+  public override init() {
     super.init()
     self.automaticallyManagesSubnodes = true
   }
