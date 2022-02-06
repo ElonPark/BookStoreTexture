@@ -11,8 +11,7 @@
 		67FFB04D42C5FCBD5D51918F /* Pods_BookStoreTexture_BookStoreTextureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */; };
 		DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */; };
 		DB0484E0277DF8E8008EB8ED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0484D4277DCF62008EB8ED /* main.swift */; };
-		DB2B035D27A59253007CBAF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035C27A59253007CBAF3 /* Network.swift */; };
-		DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */; };
+		DB19557C27B024E300A9E630 /* DataLayerOutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19557B27B024E300A9E630 /* DataLayerOutputMocks.swift */; };
 		DB6C9BFC27A97AA6003DA727 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */; };
 		DB6C9BFD27A97AA6003DA727 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */; };
 		DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */; };
@@ -28,27 +27,6 @@
 		DB6C9C2027A99B54003DA727 /* SearchModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C1F27A99B54003DA727 /* SearchModelMapperSpec.swift */; };
 		DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23027A5C47300510758 /* ReachabilityManager.swift */; };
 		DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23227A5D01B00510758 /* OutputMocks.swift */; };
-		DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23627A6B73F00510758 /* Backoff.swift */; };
-		DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */; };
-		DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */; };
-		DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */; };
-		DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD23E27A6BE7900510758 /* DelayOption.swift */; };
-		DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24027A6BEBB00510758 /* SmartRetry.swift */; };
-		DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */; };
-		DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24427A6CC3700510758 /* SearchAPI.swift */; };
-		DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */; };
-		DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */; };
-		DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */; };
-		DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */; };
-		DBCBD24F27A6CCCA00510758 /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */; };
-		DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */; };
-		DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */; };
-		DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */; };
-		DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25627A6EB9000510758 /* SearchResult.swift */; };
-		DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD25827A6ED1500510758 /* BookDetails.swift */; };
-		DBCBD32D27A95D5900510758 /* BookStoreRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */; };
-		DBCBD32E27A95D5900510758 /* NetworkErrorDescriptorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */; };
-		DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32727A95D5900510758 /* SmartRetryTests.swift */; };
 		DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */; };
 		DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */; };
 		DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBD33327A95DA200510758 /* BaseASController.swift */; };
@@ -93,8 +71,7 @@
 		AD1257B2B4AF2E8464BF7D39 /* Pods_BookStoreTexture_BookStoreTextureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStoreTexture_BookStoreTextureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0484D2277DCC70008EB8ED /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		DB0484D4277DCF62008EB8ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DB2B035C27A59253007CBAF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptor.swift; sourceTree = "<group>"; };
+		DB19557B27B024E300A9E630 /* DataLayerOutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLayerOutputMocks.swift; sourceTree = "<group>"; };
 		DB6C9BF727A97AA6003DA727 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB6C9BF827A97AA6003DA727 /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		DB6C9BF927A97AA6003DA727 /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
@@ -110,27 +87,6 @@
 		DB6C9C1F27A99B54003DA727 /* SearchModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModelMapperSpec.swift; sourceTree = "<group>"; };
 		DBCBD23027A5C47300510758 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		DBCBD23227A5D01B00510758 /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
-		DBCBD23627A6B73F00510758 /* Backoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backoff.swift; sourceTree = "<group>"; };
-		DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffStrategy.swift; sourceTree = "<group>"; };
-		DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialBackoffDecorrelatedJitter.swift; sourceTree = "<group>"; };
-		DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialBackoffFullJitter.swift; sourceTree = "<group>"; };
-		DBCBD23E27A6BE7900510758 /* DelayOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOption.swift; sourceTree = "<group>"; };
-		DBCBD24027A6BEBB00510758 /* SmartRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRetry.swift; sourceTree = "<group>"; };
-		DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtensions.swift; sourceTree = "<group>"; };
-		DBCBD24427A6CC3700510758 /* SearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
-		DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreInformation.swift; sourceTree = "<group>"; };
-		DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPISampleDataFactory.swift; sourceTree = "<group>"; };
-		DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTastable.swift; sourceTree = "<group>"; };
-		DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureFactory.swift; sourceTree = "<group>"; };
-		DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
-		DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPISampleDataFactory.swift; sourceTree = "<group>"; };
-		DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
-		DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRepository.swift; sourceTree = "<group>"; };
-		DBCBD25627A6EB9000510758 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		DBCBD25827A6ED1500510758 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
-		DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreRepositoryTests.swift; sourceTree = "<group>"; };
-		DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrorDescriptorSpec.swift; sourceTree = "<group>"; };
-		DBCBD32727A95D5900510758 /* SmartRetryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartRetryTests.swift; sourceTree = "<group>"; };
 		DBCBD32B27A95D5900510758 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DBCBD32C27A95D5900510758 /* AppDelegateTestDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTestDouble.swift; sourceTree = "<group>"; };
 		DBCBD33327A95DA200510758 /* BaseASController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASController.swift; sourceTree = "<group>"; };
@@ -306,84 +262,6 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		DB979A2D27931AB900E55AE9 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				DB979A3027931AD300E55AE9 /* Entites */,
-				DB979A3127931AE500E55AE9 /* DataSources */,
-				DB979A3327931AFF00E55AE9 /* Repositories */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		DB979A3027931AD300E55AE9 /* Entites */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD25627A6EB9000510758 /* SearchResult.swift */,
-				DBCBD25827A6ED1500510758 /* BookDetails.swift */,
-			);
-			path = Entites;
-			sourceTree = "<group>";
-		};
-		DB979A3127931AE500E55AE9 /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				DB979A3227931AF200E55AE9 /* Network */,
-			);
-			path = DataSources;
-			sourceTree = "<group>";
-		};
-		DB979A3227931AF200E55AE9 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD23427A6B6F800510758 /* SmartRetry */,
-				DBCBD22F27A5BB9E00510758 /* Extensions */,
-				DB979A3427931C2C00E55AE9 /* Protocols */,
-				DB979A3527931C3600E55AE9 /* Fixtures */,
-				DB979A3627931C4300E55AE9 /* APIs */,
-				DB2B035E27A5933A007CBAF3 /* NetworkErrorDescriptor.swift */,
-				DB2B035C27A59253007CBAF3 /* Network.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		DB979A3327931AFF00E55AE9 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD25227A6CFCC00510758 /* NetworkRepository.swift */,
-				DBCBD25427A6D1BF00510758 /* BookStoreRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		DB979A3427931C2C00E55AE9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD24A27A6CC4700510758 /* EndpointTastable.swift */,
-				DBCBD24B27A6CC4700510758 /* FixtureFactory.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		DB979A3527931C3600E55AE9 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD24827A6CC4000510758 /* SearchAPISampleDataFactory.swift */,
-				DBCBD25027A6CD1D00510758 /* BooksAPISampleDataFactory.swift */,
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
-		DB979A3627931C4300E55AE9 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD24527A6CC3700510758 /* BookStoreInformation.swift */,
-				DBCBD24427A6CC3700510758 /* SearchAPI.swift */,
-				DBCBD24E27A6CCCA00510758 /* BooksAPI.swift */,
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
 		DB979A3827931EA400E55AE9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,53 +294,6 @@
 				DB6C9BF627A97AA6003DA727 /* Search */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		DBCBD22F27A5BB9E00510758 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD24227A6CC2A00510758 /* TargetTypeExtensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		DBCBD23427A6B6F800510758 /* SmartRetry */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD23527A6B72800510758 /* Backoff */,
-				DBCBD23E27A6BE7900510758 /* DelayOption.swift */,
-				DBCBD24027A6BEBB00510758 /* SmartRetry.swift */,
-			);
-			path = SmartRetry;
-			sourceTree = "<group>";
-		};
-		DBCBD23527A6B72800510758 /* Backoff */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD23627A6B73F00510758 /* Backoff.swift */,
-				DBCBD23827A6BDEC00510758 /* BackoffStrategy.swift */,
-				DBCBD23A27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift */,
-				DBCBD23C27A6BE5200510758 /* ExponentialBackoffFullJitter.swift */,
-			);
-			path = Backoff;
-			sourceTree = "<group>";
-		};
-		DBCBD32327A95D5900510758 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD32427A95D5900510758 /* Network */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		DBCBD32427A95D5900510758 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				DBCBD32527A95D5900510758 /* BookStoreRepositoryTests.swift */,
-				DBCBD32627A95D5900510758 /* NetworkErrorDescriptorSpec.swift */,
-				DBCBD32727A95D5900510758 /* SmartRetryTests.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		DBCBD32827A95D5900510758 /* Presentation */ = {
@@ -513,7 +344,6 @@
 		DBD708A527677407001C5390 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DB979A2D27931AB900E55AE9 /* Data */,
 				DB979A2C27931AB000E55AE9 /* Domain */,
 				DB979A2B27931AA600E55AE9 /* Presentation */,
 				DBD708A627677516001C5390 /* Root */,
@@ -567,10 +397,10 @@
 			isa = PBXGroup;
 			children = (
 				DB6C9C1D27A99B2E003DA727 /* Domain */,
-				DBCBD32327A95D5900510758 /* Data */,
 				DBCBD32827A95D5900510758 /* Presentation */,
 				DBCBD32A27A95D5900510758 /* Root */,
 				DBCBD23227A5D01B00510758 /* OutputMocks.swift */,
+				DB19557B27B024E300A9E630 /* DataLayerOutputMocks.swift */,
 			);
 			path = BookStoreTextureTests;
 			sourceTree = "<group>";
@@ -840,44 +670,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCBD25527A6D1BF00510758 /* BookStoreRepository.swift in Sources */,
-				DBCBD25127A6CD1D00510758 /* BooksAPISampleDataFactory.swift in Sources */,
 				DB6C9BFD27A97AA6003DA727 /* SearchInteractor.swift in Sources */,
-				DBCBD23727A6B73F00510758 /* Backoff.swift in Sources */,
 				DB0484D3277DCC70008EB8ED /* CompositionRoot.swift in Sources */,
-				DB2B035F27A5933A007CBAF3 /* NetworkErrorDescriptor.swift in Sources */,
-				DBCBD25327A6CFCC00510758 /* NetworkRepository.swift in Sources */,
 				DBCBD23127A5C47300510758 /* ReachabilityManager.swift in Sources */,
 				DB6C9BFC27A97AA6003DA727 /* SearchViewController.swift in Sources */,
-				DBCBD24C27A6CC4800510758 /* EndpointTastable.swift in Sources */,
 				DBCBD33D27A96F7200510758 /* BaseNavigationController.swift in Sources */,
 				DB6C9BFE27A97AA6003DA727 /* SearchPresenter.swift in Sources */,
-				DBCBD24127A6BEBB00510758 /* SmartRetry.swift in Sources */,
 				DBFE6A5A2763AABF00DAAFBD /* ViewController.swift in Sources */,
 				DB6C9C1B27A996E4003DA727 /* SearchResponse.swift in Sources */,
 				DBCBD33427A95DA200510758 /* BaseASController.swift in Sources */,
-				DB2B035D27A59253007CBAF3 /* Network.swift in Sources */,
 				DBF9F5C7279EDAD100E7DAEC /* Theme.swift in Sources */,
-				DBCBD25727A6EB9000510758 /* SearchResult.swift in Sources */,
-				DBCBD25927A6ED1500510758 /* BookDetails.swift in Sources */,
 				DB6C9C1927A99528003DA727 /* SearchError.swift in Sources */,
-				DBCBD24727A6CC3700510758 /* BookStoreInformation.swift in Sources */,
-				DBCBD23B27A6BE0500510758 /* ExponentialBackoffDecorrelatedJitter.swift in Sources */,
-				DBCBD23D27A6BE5200510758 /* ExponentialBackoffFullJitter.swift in Sources */,
-				DBCBD24F27A6CCCA00510758 /* BooksAPI.swift in Sources */,
-				DBCBD24627A6CC3700510758 /* SearchAPI.swift in Sources */,
 				DB0484E0277DF8E8008EB8ED /* main.swift in Sources */,
 				DB6C9C1227A993D3003DA727 /* SearchViewModels.swift in Sources */,
 				DB6C9C1627A9947C003DA727 /* SearchModelMapper.swift in Sources */,
 				DBFE6A562763AABF00DAAFBD /* AppDelegate.swift in Sources */,
 				DB6C9BFF27A97AA6003DA727 /* SearchModel.swift in Sources */,
 				DBCBD33B27A96CEB00510758 /* BaseDisplayNode.swift in Sources */,
-				DBCBD23927A6BDEC00510758 /* BackoffStrategy.swift in Sources */,
-				DBCBD24327A6CC2A00510758 /* TargetTypeExtensions.swift in Sources */,
 				DB6C9C0027A97AA6003DA727 /* SearchRouter.swift in Sources */,
-				DBCBD24927A6CC4000510758 /* SearchAPISampleDataFactory.swift in Sources */,
-				DBCBD24D27A6CC4800510758 /* FixtureFactory.swift in Sources */,
-				DBCBD23F27A6BE7900510758 /* DelayOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,13 +695,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCBD32F27A95D5900510758 /* SmartRetryTests.swift in Sources */,
 				DB6C9C2027A99B54003DA727 /* SearchModelMapperSpec.swift in Sources */,
 				DBCBD33027A95D5900510758 /* AppDelegateTests.swift in Sources */,
+				DB19557C27B024E300A9E630 /* DataLayerOutputMocks.swift in Sources */,
 				DB6C9C0627A97AB5003DA727 /* SearchInteractorTests.swift in Sources */,
 				DB6C9C0727A97AB5003DA727 /* SearchPresenterTests.swift in Sources */,
-				DBCBD32E27A95D5900510758 /* NetworkErrorDescriptorSpec.swift in Sources */,
-				DBCBD32D27A95D5900510758 /* BookStoreRepositoryTests.swift in Sources */,
 				DBCBD23327A5D01B00510758 /* OutputMocks.swift in Sources */,
 				DB6C9C0527A97AB5003DA727 /* SearchViewControllerTests.swift in Sources */,
 				DBCBD33127A95D5900510758 /* AppDelegateTestDouble.swift in Sources */,

@@ -7,6 +7,8 @@
 
 import Foundation
 
+import DataLayer
+
 struct SearchModelMapper {
   func mapToSearchResponse() -> (SearchResult) throws -> SearchResponse {
     return { searchResult in

@@ -6,6 +6,9 @@
 //
 
 @testable import BookStoreTexture
+
+import DataLayer
+
 import Quick
 import Nimble
 import Combine

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DataLayer
 
 struct AppDependency {
   let window: UIWindow

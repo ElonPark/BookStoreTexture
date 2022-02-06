@@ -11,8 +11,7 @@ target 'BookStoreTexture' do
   pod 'Pure'
 
   # Network
-  pod 'Moya/RxSwift', '~> 15.0'
-  pod 'RxReachability', '~> 1.2.1'
+  pod 'DataLayer', :path => './libs/DataLayer'
 
   # UI
   pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git'
@@ -27,9 +26,6 @@ target 'BookStoreTexture' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
-
-    pod 'RxBlocking'
-    pod 'RxTest'
   end
 
   target 'BookStoreTextureUITests' do
