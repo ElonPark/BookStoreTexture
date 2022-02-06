@@ -7,7 +7,7 @@
 
 import RxSwift
 
-extension Disposable {
+public extension Disposable {
 
   /// Adds self to `CompositeDisposable`
   ///

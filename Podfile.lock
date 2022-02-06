@@ -62,6 +62,8 @@ PODS:
   - Texture/Video (3.1.0):
     - Texture/Core
   - Then (2.7.0)
+  - Utility (0.1.0):
+    - RxSwift
 
 DEPENDENCIES:
   - EPLogger
@@ -74,6 +76,7 @@ DEPENDENCIES:
   - RxTest
   - Texture (from `https://github.com/TextureGroup/Texture.git`)
   - Then
+  - Utility (from `./libs/Utility`)
 
 SPEC REPOS:
   trunk:
@@ -98,6 +101,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Texture:
     :git: https://github.com/TextureGroup/Texture.git
+  Utility:
+    :path: "./libs/Utility"
 
 CHECKOUT OPTIONS:
   Texture:
@@ -123,7 +128,8 @@ SPEC CHECKSUMS:
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Utility: ec7062276af71de4a8ad2f9df9c9cd6a0606821c
 
-PODFILE CHECKSUM: 95d0757a53467aeabf11a594ed09abc182855aac
+PODFILE CHECKSUM: bf2c824eeaa385b1fddbceb4ac455302a87f0fe7
 
 COCOAPODS: 1.11.2

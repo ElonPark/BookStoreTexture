@@ -7,12 +7,12 @@
 
 import RxSwift
 
-protocol DisposablesManageable {
+public protocol DisposablesManageable {
   func disposeDisposables()
   func resetDisposables()
 }
 
-extension DisposablesManageable where Self: HasCompositeDisposable {
+public extension DisposablesManageable where Self: HasCompositeDisposable {
   func disposeDisposables() {
     self.disposables.dispose()
   }

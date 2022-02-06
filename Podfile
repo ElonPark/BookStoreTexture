@@ -20,6 +20,7 @@ target 'BookStoreTexture' do
   # Common
   pod 'Then'
   pod 'EPLogger'
+  pod 'Utility', :path => './libs/Utility'
 
   target 'BookStoreTextureTests' do
     inherit! :search_paths

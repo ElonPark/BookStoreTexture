@@ -9,7 +9,7 @@ import AsyncDisplayKit
 import RxSwift
 import Then
 
-class BaseASViewController: ASDKViewController<BaseDisplayNode>, HasDisposeBag {
+class BaseASViewController: ASDKViewController<BaseDisplayNode> {
 
   // MARK: Properties
 

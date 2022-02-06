@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (9.2.1)
+  - RxSwift (6.5.0)
+  - Utility (0.1.0):
+    - RxSwift
+
+DEPENDENCIES:
+  - Nimble
+  - Utility (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - RxSwift
+
+EXTERNAL SOURCES:
+  Utility:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  Utility: ec7062276af71de4a8ad2f9df9c9cd6a0606821c
+
+PODFILE CHECKSUM: 781c3a37a0a1fe4ed9d3375fe0cbaed136c02a2b
+
+COCOAPODS: 1.11.2

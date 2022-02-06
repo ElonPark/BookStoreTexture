@@ -7,6 +7,6 @@
 
 import RxSwift
 
-protocol HasCompositeDisposable: AnyObject {
+public protocol HasCompositeDisposable: AnyObject {
   var disposables: CompositeDisposable { get set }
 }

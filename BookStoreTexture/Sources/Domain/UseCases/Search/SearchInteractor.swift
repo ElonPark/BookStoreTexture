@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Utility
+
 import Pure
 import RxSwift
 import RxRelay
