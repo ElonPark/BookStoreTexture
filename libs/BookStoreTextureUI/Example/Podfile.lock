@@ -1,0 +1,82 @@
+PODS:
+  - BookStoreTextureUI (0.1.0):
+    - Texture
+    - Then
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.3):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
+  - Texture (3.1.0):
+    - Texture/AssetsLibrary (= 3.1.0)
+    - Texture/Core (= 3.1.0)
+    - Texture/MapKit (= 3.1.0)
+    - Texture/Photos (= 3.1.0)
+    - Texture/PINRemoteImage (= 3.1.0)
+    - Texture/Video (= 3.1.0)
+  - Texture/AssetsLibrary (3.1.0):
+    - Texture/Core
+  - Texture/Core (3.1.0)
+  - Texture/MapKit (3.1.0):
+    - Texture/Core
+  - Texture/Photos (3.1.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.1.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.1.0):
+    - Texture/Core
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - BookStoreTextureUI (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+  - Texture (from `https://github.com/TextureGroup/Texture.git`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - Then
+
+EXTERNAL SOURCES:
+  BookStoreTextureUI:
+    :path: "../"
+  Texture:
+    :git: https://github.com/TextureGroup/Texture.git
+
+CHECKOUT OPTIONS:
+  Texture:
+    :commit: 50426db99621c8e648fc378647d6288eba603761
+    :git: https://github.com/TextureGroup/Texture.git
+
+SPEC CHECKSUMS:
+  BookStoreTextureUI: 5ce1dc19f7d97c388c0191fcc660ec3b91e79a90
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: 94531253fd6c0968efcf6cc0d8f095ef6d812bc5
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,9 @@
+platform :ios, '13.0'
+use_frameworks!
+target 'DataLayer_Tests' do
+  pod 'DataLayer', :path => '../'
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxBlocking'
+
+end

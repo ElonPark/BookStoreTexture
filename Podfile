@@ -11,27 +11,37 @@ target 'BookStoreTexture' do
   pod 'Pure'
 
   # Network
-  pod 'Moya/RxSwift', '~> 15.0'
-  pod 'RxReachability', '~> 1.2.1'
+  pod 'DataLayer', :path => './libs/DataLayer'
 
   # UI
   pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git'
-
+  pod 'BookStoreTextureUI', :path => './libs/BookStoreTextureUI'
+  
   # Common
   pod 'Then'
   pod 'EPLogger'
+  pod 'Utility', :path => './libs/Utility'
 
   target 'BookStoreTextureTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
-
-    pod 'RxBlocking'
-    pod 'RxTest'
   end
 
   target 'BookStoreTextureUITests' do
     # Pods for testing
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+
+      if Gem::Version.new('9.0') > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+    end
   end
 end

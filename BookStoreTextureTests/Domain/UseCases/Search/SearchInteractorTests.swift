@@ -8,6 +8,8 @@
 
 import XCTest
 
+import DataLayer
+
 @testable import BookStoreTexture
 import Nimble
 import Pure

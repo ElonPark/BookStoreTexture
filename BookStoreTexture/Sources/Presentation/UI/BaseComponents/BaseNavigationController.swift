@@ -5,9 +5,9 @@
 //  Created by Elon on 2022/02/01.
 //
 
-import AsyncDisplayKit
+import BookStoreTextureUI
 
-class BaseNavigationController: ASDKNavigationController {
+class BaseNavigationController: BSTNavigationController {
 
   override init(rootViewController: UIViewController) {
     super.init(rootViewController: rootViewController)

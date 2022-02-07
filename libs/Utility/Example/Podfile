@@ -1,0 +1,8 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'Utility_Tests' do
+  pod 'Utility', :path => '../'
+  pod 'Nimble'
+  
+end

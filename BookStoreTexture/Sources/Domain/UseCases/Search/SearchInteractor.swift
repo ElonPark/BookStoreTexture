@@ -8,6 +8,9 @@
 
 import Foundation
 
+import DataLayer
+import Utility
+
 import Pure
 import RxSwift
 import RxRelay
